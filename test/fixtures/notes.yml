@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  notes: MyString
+  student_id: MyString
+  integer: MyString
+  mod_id: 1
+  lecture_name: MyString
+  content: MyString
+  highlights: MyString
+
+two:
+  notes: MyString
+  student_id: MyString
+  integer: MyString
+  mod_id: 1
+  lecture_name: MyString
+  content: MyString
+  highlights: MyString

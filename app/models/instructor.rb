@@ -1,3 +1,3 @@
 class Instructor < ApplicationRecord
-  has_many :mods
+  belongs_to :mod
 end

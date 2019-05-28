@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  mod_name: MyString
+  mod_start_date: MyString
+  github_link: MyString
+
+two:
+  name: MyString
+  mod_name: MyString
+  mod_start_date: MyString
+  github_link: MyString
