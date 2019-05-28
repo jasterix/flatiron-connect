@@ -1,0 +1,25 @@
+#Ignore bundler config
+/.bundle
+
+#Ignore default sqlite db
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+#Ignore logs and temporary files
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+#Ignore uploaded files
+/storage/*
+!/storage/.keep
+
+/node_modules
+/yarn-error.log
+/public/assets
+.byebug_history
+
+#ignore master key
+/config/master.key
+
