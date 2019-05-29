@@ -1,8 +1,12 @@
 <h1> <%= @mod.mod_description %>'s Lectures </h1>
-<p>
+
 <ul>
+<h3><%= link_to 'Add a new note', new_note_path %><hr></h3>
+<p>
 <% @mod.notes.where(mod_id:1).map do |note|%>
   <%= link_to note.lecture_name, note_path(note) %><br>
 <% end %>
+
+
 </ul>
 </p>

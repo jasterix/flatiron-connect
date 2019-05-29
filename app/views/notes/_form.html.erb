@@ -1,8 +1,11 @@
 <%= form_for @note do |f| %>
 <%= f.label "Mod:" %>
-<%= f.collection_select :mod, Mod.all, :id, :mod_description %>
+<%= f.collection_select :mod_id, Mod.all, :id, :mod_description %>
 <%= f.label "Lecture Name:" %>
 <%= f.text_field :lecture_name %> <br> <br>
+
+<%= f.label "Student Name" %>
+<%= f.collection_select :student_id, Student.all, :id, :name %>
 
 <%= f.text_area :content, placeholder: "Paste your notes here", size: "60x12"  %> <br>
 

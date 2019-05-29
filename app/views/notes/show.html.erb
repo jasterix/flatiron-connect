@@ -3,8 +3,10 @@
 
 Things to keep in mind: <%= @note.highlights %>
 <hr>
-<%= @note.lecture_name %> Notes
-<%= @note.content %>
 
+<h3><%= @note.student.name %>'s Notes<br></h3>
+<% Note.all.each do |note| %>
+  <%= note.content %>
+<% end %>
 <hr>
 <em>Created: <%= @note.created_at %><br></em>
