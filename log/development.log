@@ -5514,3 +5514,79 @@ Migrating to RemoveModFromInstructors (20190529145248)
   ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateInstructMods (20190529152653)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190529152653_create_instruct_mods.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "instruct_mods" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "mods_id" integer, "instructors_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_7a1ed1f896"
+FOREIGN KEY ("mods_id")
+  REFERENCES "mods" ("id")
+, CONSTRAINT "fk_rails_1bc6ab0f3e"
+FOREIGN KEY ("instructors_id")
+  REFERENCES "instructors" ("id")
+)[0m
+  ↳ db/migrate/20190529152653_create_instruct_mods.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_instruct_mods_on_mods_id" ON "instruct_mods" ("mods_id")[0m
+  ↳ db/migrate/20190529152653_create_instruct_mods.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_instruct_mods_on_instructors_id" ON "instruct_mods" ("instructors_id")[0m
+  ↳ db/migrate/20190529152653_create_instruct_mods.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190529152653"]]
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to RemoveModIdFromInstructors (20190529152738)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ainstructors" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "mod_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190529152738_remove_mod_id_from_instructors.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ainstructors" ("id","name","mod_id","created_at","updated_at")
+                     SELECT "id","name","mod_id","created_at","updated_at" FROM "instructors"[0m
+  ↳ db/migrate/20190529152738_remove_mod_id_from_instructors.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "instructors"[0m
+  ↳ db/migrate/20190529152738_remove_mod_id_from_instructors.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "instructors" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190529152738_remove_mod_id_from_instructors.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "instructors" ("id","name","created_at","updated_at")
+                     SELECT "id","name","created_at","updated_at" FROM "ainstructors"[0m
+  ↳ db/migrate/20190529152738_remove_mod_id_from_instructors.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "ainstructors"[0m
+  ↳ db/migrate/20190529152738_remove_mod_id_from_instructors.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190529152738"]]
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Started GET "/instructors/1" for ::1 at 2019-05-29 11:31:02 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnhill/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:42
+  Rendering instructors/show.html.erb within layouts/application
+  Rendered instructors/show.html.erb within layouts/application (41.2ms)
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `mod_id' for #<Instructor:0x00007f8f31e3be90>
+Did you mean?  mod_ids
+               mod_ids=):
+    1: <h1><%= @instructor.name %></h1>
+    2: <ul>
+    3: 
+    4:   <li><%= link_to @instructor.mod_id, mod_path(@instructor.mod_id) %></li>
+    5: 
+    6: </ul>
+  
+app/views/instructors/show.html.erb:4:in `_app_views_instructors_show_html_erb__2754857758739225089_70126497025460'
