@@ -1,6 +1,6 @@
 <h1>Flatiron Mods</h1>
 <ul>
-<%= @mods.each do |mod| %>
+<% @mods.each do |mod| %>
   <li> <%= link_to mod.mod_description, mod_path(mod) %></li>
 <% end %>
 
