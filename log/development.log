@@ -5468,4 +5468,61 @@ Processing by StudentsController#show as HTML
 Completed 200 OK in 41ms (Views: 37.1ms | ActiveRecord: 0.4ms)
 
 
+<<<<<<< HEAD
 >>>>>>> 68e2c872f1b172cb6e8300010f1777bd26bf1293
+=======
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to ChangeModNumberToStringFromMods (20190529145010)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (11.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190529145010_change_mod_number_to_string_from_mods.rb:3
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE TEMPORARY TABLE "amods" ("id" integer NOT NULL PRIMARY KEY, "mod_number" integer DEFAULT NULL, "mod_description" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190529145010_change_mod_number_to_string_from_mods.rb:3
+  [1m[35m (28.7ms)[0m  [1m[32mINSERT INTO "amods" ("id","mod_number","mod_description","created_at","updated_at")
+                     SELECT "id","mod_number","mod_description","created_at","updated_at" FROM "mods"[0m
+  ↳ db/migrate/20190529145010_change_mod_number_to_string_from_mods.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "mods"[0m
+  ↳ db/migrate/20190529145010_change_mod_number_to_string_from_mods.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "mods" ("id" integer NOT NULL PRIMARY KEY, "mod_number" varchar DEFAULT NULL, "mod_description" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190529145010_change_mod_number_to_string_from_mods.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "mods" ("id","mod_number","mod_description","created_at","updated_at")
+                     SELECT "id","mod_number","mod_description","created_at","updated_at" FROM "amods"[0m
+  ↳ db/migrate/20190529145010_change_mod_number_to_string_from_mods.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "amods"[0m
+  ↳ db/migrate/20190529145010_change_mod_number_to_string_from_mods.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190529145010"]]
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to RemoveModFromInstructors (20190529145248)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ainstructors" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "mod" integer DEFAULT NULL, "mod_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190529145248_remove_mod_from_instructors.rb:3
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "ainstructors" ("id","name","mod","mod_id","created_at","updated_at")
+                     SELECT "id","name","mod","mod_id","created_at","updated_at" FROM "instructors"[0m
+  ↳ db/migrate/20190529145248_remove_mod_from_instructors.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "instructors"[0m
+  ↳ db/migrate/20190529145248_remove_mod_from_instructors.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "instructors" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "mod_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190529145248_remove_mod_from_instructors.rb:3
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "instructors" ("id","name","mod_id","created_at","updated_at")
+                     SELECT "id","name","mod_id","created_at","updated_at" FROM "ainstructors"[0m
+  ↳ db/migrate/20190529145248_remove_mod_from_instructors.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "ainstructors"[0m
+  ↳ db/migrate/20190529145248_remove_mod_from_instructors.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190529145248"]]
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (34.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+>>>>>>> edit_tabels
