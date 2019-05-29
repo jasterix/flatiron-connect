@@ -15,9 +15,9 @@ Follow.destroy_all
 require 'faker'
 
 #MODS-------------------------------------------------------------------
-mods = [1, 2, 3, 4, 5]
+mods = [Mod 1, Mod 2, Mod 3, Mod 4, Mod 5]
 mods.map do |x|
-  Mod.create(mod_number:x, mod_description: "Mod #{x}")
+  Mod.create(mod_number:x)
 end
 
 #FOLLOWS-------------------------------------------------------------------
