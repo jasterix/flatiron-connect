@@ -5835,3 +5835,288 @@ Did you mean?  mod_ids
   
 app/views/instructors/show.html.erb:4:in `_app_views_instructors_show_html_erb___1358617963514763951_70234902733020'
 >>>>>>> edit_tabels
+Started GET "/instructors" for ::1 at 2019-05-29 14:38:55 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnhill/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to ChangeStartDateToDateTime (20190529182626)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190529182626_change_start_date_to_date_time.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "mod_name" varchar DEFAULT NULL, "mod_start_date" varchar DEFAULT NULL, "github_link" varchar DEFAULT NULL, "linkedin_link" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190529182626_change_start_date_to_date_time.rb:3
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","mod_name","mod_start_date","github_link","linkedin_link","created_at","updated_at")
+                     SELECT "id","name","mod_name","mod_start_date","github_link","linkedin_link","created_at","updated_at" FROM "students"[0m
+  ↳ db/migrate/20190529182626_change_start_date_to_date_time.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "students"[0m
+  ↳ db/migrate/20190529182626_change_start_date_to_date_time.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "mod_name" varchar DEFAULT NULL, "mod_start_date" datetime DEFAULT NULL, "github_link" varchar DEFAULT NULL, "linkedin_link" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190529182626_change_start_date_to_date_time.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "students" ("id","name","mod_name","mod_start_date","github_link","linkedin_link","created_at","updated_at")
+                     SELECT "id","name","mod_name","mod_start_date","github_link","linkedin_link","created_at","updated_at" FROM "astudents"[0m
+  ↳ db/migrate/20190529182626_change_start_date_to_date_time.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "astudents"[0m
+  ↳ db/migrate/20190529182626_change_start_date_to_date_time.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190529182626"]]
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Started GET "/instructors" for ::1 at 2019-05-29 14:39:19 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnhill/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by InstructorsController#index as HTML
+  Rendering instructors/index.html.erb within layouts/application
+  [1m[36mInstructor Load (1.0ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  ↳ app/views/instructors/index.html.erb:3
+  Rendered instructors/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 595ms (Views: 546.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 14:39:37 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnhill/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:3
+  Rendered students/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 409ms (Views: 373.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/students/2" for ::1 at 2019-05-29 14:39:41 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:47
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."student_id" = ?[0m  [["student_id", 2]]
+  ↳ app/views/students/show.html.erb:8
+  Rendered students/show.html.erb within layouts/application (81.4ms)
+Completed 200 OK in 111ms (Views: 105.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/students/new" for ::1 at 2019-05-29 14:39:46 -0400
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/_form.html.erb (406.9ms)
+  Rendered students/new.html.erb within layouts/application (409.4ms)
+Completed 200 OK in 453ms (Views: 439.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for ::1 at 2019-05-29 14:40:15 -0400
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HZH+sz4EHoUH5jrlNFDFiTYMTVE0uFdKVGWUSBaHKQH3MeM6LU3CpZri9K1pSbo1nYCa1j/LeqIqtzrMXjpXjQ==", "student"=>{"name"=>"Dave East", "mod_name"=>"HAsketballers", "mod_start_date"=>"04222019", "github_link"=>"HTTP://WWW.GITHUB.COM", "linkedin_link"=>"HTTP://WWW.LINKEDIN.COM"}, "commit"=>"Create Student"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:16
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO "students" ("name", "mod_name", "github_link", "linkedin_link", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Dave East"], ["mod_name", "HAsketballers"], ["github_link", "HTTP://WWW.GITHUB.COM"], ["linkedin_link", "HTTP://WWW.LINKEDIN.COM"], ["created_at", "2019-05-29 18:40:15.983080"], ["updated_at", "2019-05-29 18:40:15.983080"]]
+  ↳ app/controllers/students_controller.rb:16
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:16
+Redirected to http://localhost:3000/students/11
+Completed 302 Found in 33ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/students/11" for ::1 at 2019-05-29 14:40:16 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:47
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."student_id" = ?[0m  [["student_id", 11]]
+  ↳ app/views/students/show.html.erb:8
+  Rendered students/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 49ms (Views: 44.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/students" for ::1 at 2019-05-29 14:42:40 -0400
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HZH+sz4EHoUH5jrlNFDFiTYMTVE0uFdKVGWUSBaHKQH3MeM6LU3CpZri9K1pSbo1nYCa1j/LeqIqtzrMXjpXjQ==", "student"=>{"name"=>"Dave East", "mod_name"=>"HAsketballers", "mod_start_date"=>"04222019", "github_link"=>"HTTP://WWW.GITHUB.COM", "linkedin_link"=>"HTTP://WWW.LINKEDIN.COM"}, "commit"=>"Create Student"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:16
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO "students" ("name", "mod_name", "github_link", "linkedin_link", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Dave East"], ["mod_name", "HAsketballers"], ["github_link", "HTTP://WWW.GITHUB.COM"], ["linkedin_link", "HTTP://WWW.LINKEDIN.COM"], ["created_at", "2019-05-29 18:42:40.770953"], ["updated_at", "2019-05-29 18:42:40.770953"]]
+  ↳ app/controllers/students_controller.rb:16
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:16
+Redirected to http://localhost:3000/students/12
+Completed 302 Found in 6ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/students/12" for ::1 at 2019-05-29 14:42:40 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:47
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."student_id" = ?[0m  [["student_id", 12]]
+  ↳ app/views/students/show.html.erb:8
+  Rendered students/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 47ms (Views: 43.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/students/12" for ::1 at 2019-05-29 14:42:43 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:47
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."student_id" = ?[0m  [["student_id", 12]]
+  ↳ app/views/students/show.html.erb:8
+  Rendered students/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 36ms (Views: 32.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 14:42:49 -0400
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:3
+  Rendered students/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 64ms (Views: 61.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students/11" for ::1 at 2019-05-29 14:42:52 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:47
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."student_id" = ?[0m  [["student_id", 11]]
+  ↳ app/views/students/show.html.erb:8
+  Rendered students/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 38ms (Views: 33.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students/11" for ::1 at 2019-05-29 14:42:58 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:47
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."student_id" = ?[0m  [["student_id", 11]]
+  ↳ app/views/students/show.html.erb:8
+  Rendered students/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students/11/edit" for ::1 at 2019-05-29 14:43:04 -0400
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:47
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/_form.html.erb (35.9ms)
+  Rendered students/edit.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 104ms (Views: 101.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/students/11" for ::1 at 2019-05-29 14:43:26 -0400
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fhWALJ3lMCuxez6q3RAq2i0+e9dS2mYaRwZ0ilOVjbCUtZ2ljqzsCyx/8OKACVVmhrKsUFmpS/I51NoOGyjzPA==", "student"=>{"name"=>"Dave East", "mod_name"=>"HAsketballers", "mod_start_date"=>"2019-04-22", "github_link"=>"HTTP://WWW.GITHUB.COM", "linkedin_link"=>"HTTP://WWW.LINKEDIN.COM"}, "commit"=>"Update Student", "id"=>"11"}
+  [1m[36mStudent Load (2.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:47
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:25
+  [1m[36mStudent Update (0.8ms)[0m  [1m[33mUPDATE "students" SET "mod_start_date" = ?, "updated_at" = ? WHERE "students"."id" = ?[0m  [["mod_start_date", "2019-04-22 00:00:00"], ["updated_at", "2019-05-29 18:43:26.110750"], ["id", 11]]
+  ↳ app/controllers/students_controller.rb:25
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:27
+Redirected to http://localhost:3000/students/11
+Completed 302 Found in 20ms (ActiveRecord: 9.1ms)
+
+
+Started GET "/students/11" for ::1 at 2019-05-29 14:43:26 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:47
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."student_id" = ?[0m  [["student_id", 11]]
+  ↳ app/views/students/show.html.erb:8
+  Rendered students/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 54ms (Views: 50.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/students/11" for ::1 at 2019-05-29 14:45:03 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:47
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."student_id" = ?[0m  [["student_id", 11]]
+  ↳ app/views/students/show.html.erb:8
+  Rendered students/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 14:45:21 -0400
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:3
+  Rendered students/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 43ms (Views: 40.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/resources" for ::1 at 2019-05-29 14:45:26 -0400
+Processing by ResourcesController#index as HTML
+  Rendering resources/index.html.erb within layouts/application
+  Rendered resources/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 60ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+

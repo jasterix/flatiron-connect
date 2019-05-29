@@ -1,6 +1,6 @@
 <h1><%= @student.name %></h1>
 <p>Mod Name: <%= @student.mod_name %><br>
-  Mod Start Date: <%= @student.mod_start_date %><br>
+  Mod Start Date: <%= @student.mod_start_date.strftime("%B %d, %Y") %><br>
   GitHub: <%= @student.github_link %><br>
   Linked In: <%= @student.linkedin_link %>
   <h2>Notes:</h2>
