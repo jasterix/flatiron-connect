@@ -2672,3 +2672,1541 @@ Migrating to CreateMods (20190528202019)
   [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" LIMIT ?[0m  [["LIMIT", 11]]
   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "students"."id" FROM "students"[0m
+Started GET "/drivers" for ::1 at 2019-05-28 19:47:38 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ljc/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/drivers"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/mods" for ::1 at 2019-05-28 19:47:39 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  Rendered mods/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 1850ms (Views: 1818.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-05-28 19:47:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/mods" for ::1 at 2019-05-28 19:49:40 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.4ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 88ms (Views: 84.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/mods" for ::1 at 2019-05-28 19:49:53 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 94ms (Views: 91.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mods" for ::1 at 2019-05-28 19:49:54 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mods" for ::1 at 2019-05-28 19:49:55 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mods" for ::1 at 2019-05-28 19:49:55 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.3ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 45ms (Views: 42.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mods" for ::1 at 2019-05-28 19:49:56 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.3ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 49ms (Views: 47.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mods" for ::1 at 2019-05-28 19:50:00 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 39ms (Views: 36.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mods" for ::1 at 2019-05-28 19:51:06 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Mod:0x00007fc3fb248198>):
+    1: <h1>Flatiron Mods</h1>
+    2: <ul>
+    3: <%= @mods.each do |mod| %>
+    4:   <li> <%= link_to mod.name  %></li>
+    5:   <li> <%= link_tomod.description %></li>
+    6: <% end %>
+    7: 
+  
+app/views/mods/index.html.erb:4:in `block in _app_views_mods_index_html_erb___4412301161604374899_70239862733420'
+app/views/mods/index.html.erb:3:in `_app_views_mods_index_html_erb___4412301161604374899_70239862733420'
+Started PUT "/__web_console/repl_sessions/a32459b920c065d72f95da06c4d87d9a" for ::1 at 2019-05-28 19:51:13 -0400
+Started PUT "/__web_console/repl_sessions/a32459b920c065d72f95da06c4d87d9a" for ::1 at 2019-05-28 19:51:14 -0400
+Started GET "/mods" for ::1 at 2019-05-28 19:51:23 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (330.2ms)
+Completed 500 Internal Server Error in 335ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `link_tomod' for #<#<Class:0x00007fc3f6578b38>:0x00007fc3f76ff000>
+Did you mean?  link_to
+               link_to_if):
+    1: <h1>Flatiron Mods</h1>
+    2: <ul>
+    3: <%= @mods.each do |mod| %>
+    4:   <li> <%= link_tomod.description %></li>
+    5: <% end %>
+    6: 
+    7: </ul>
+  
+app/views/mods/index.html.erb:4:in `block in _app_views_mods_index_html_erb___4412301161604374899_70239823330460'
+app/views/mods/index.html.erb:3:in `_app_views_mods_index_html_erb___4412301161604374899_70239823330460'
+Started GET "/mods" for ::1 at 2019-05-28 19:51:30 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (14.9ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `description' for #<Mod:0x00007fc3f7fb7a30>
+Did you mean?  mod_description):
+    1: <h1>Flatiron Mods</h1>
+    2: <ul>
+    3: <%= @mods.each do |mod| %>
+    4:   <li> <%= link_to mod.description %></li>
+    5: <% end %>
+    6: 
+    7: </ul>
+  
+app/views/mods/index.html.erb:4:in `block in _app_views_mods_index_html_erb___4412301161604374899_70239862766440'
+app/views/mods/index.html.erb:3:in `_app_views_mods_index_html_erb___4412301161604374899_70239862766440'
+Started PUT "/__web_console/repl_sessions/549e0885db8198330b3103e9b09e5f74" for ::1 at 2019-05-28 19:51:43 -0400
+Started PUT "/__web_console/repl_sessions/549e0885db8198330b3103e9b09e5f74" for ::1 at 2019-05-28 19:51:43 -0400
+Started PUT "/__web_console/repl_sessions/549e0885db8198330b3103e9b09e5f74" for ::1 at 2019-05-28 19:51:45 -0400
+Started PUT "/__web_console/repl_sessions/549e0885db8198330b3103e9b09e5f74" for ::1 at 2019-05-28 19:51:47 -0400
+Started GET "/mods" for ::1 at 2019-05-28 19:52:06 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.6ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 154ms (Views: 150.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/mods" for ::1 at 2019-05-28 19:52:10 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (1.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 74ms (Views: 67.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/mods" for ::1 at 2019-05-28 19:52:27 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `uniq' for "Mod 1":String):
+    1: <h1>Flatiron Mods</h1>
+    2: <ul>
+    3: <%= @mods.each do |mod| %>
+    4:   <li> <%= link_to mod.mod_description.uniq %></li>
+    5: <% end %>
+    6: 
+    7: </ul>
+  
+app/views/mods/index.html.erb:4:in `block in _app_views_mods_index_html_erb___4412301161604374899_70239854380600'
+app/views/mods/index.html.erb:3:in `_app_views_mods_index_html_erb___4412301161604374899_70239854380600'
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:52:30 -0400
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:52:32 -0400
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:52:33 -0400
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:52:37 -0400
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:52:39 -0400
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /Users/ljc/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:52:41 -0400
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:52:42 -0400
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:52:43 -0400
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:4
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:52:46 -0400
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:4
+  [1m[36mCACHE Mod Load (0.0ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:4
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:52:47 -0400
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:4
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:52:48 -0400
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:52:48 -0400
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:52:50 -0400
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:52:50 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:4
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:53:10 -0400
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:53:14 -0400
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:53:15 -0400
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" ORDER BY "mods"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 4]]
+  ↳ app/views/mods/index.html.erb:4
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:53:20 -0400
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:53:25 -0400
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:53:27 -0400
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:53:32 -0400
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:53:39 -0400
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:53:41 -0400
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" ORDER BY "mods"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/mods/index.html.erb:4
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:53:49 -0400
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:53:56 -0400
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:54:03 -0400
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:54:04 -0400
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:54:07 -0400
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:54:11 -0400
+  [1m[36mMod Load (0.3ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/mods/index.html.erb:4
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:54:15 -0400
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/mods/index.html.erb:4
+  [1m[36mCACHE Mod Load (0.0ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/mods/index.html.erb:4
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:54:17 -0400
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/mods/index.html.erb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/views/mods/index.html.erb:4
+  [1m[36mMod Destroy (0.8ms)[0m  [1m[31mDELETE FROM "mods" WHERE "mods"."id" = ?[0m  [["id", 6]]
+  ↳ app/views/mods/index.html.erb:4
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/views/mods/index.html.erb:4
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:54:21 -0400
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:54:21 -0400
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/mods/index.html.erb:4
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:54:28 -0400
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" >= ? AND "mods"."id" < ? LIMIT ?[0m  [["id", 7], ["id", 5], ["LIMIT", 1]]
+  ↳ app/views/mods/index.html.erb:4
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:54:29 -0400
+Started PUT "/__web_console/repl_sessions/93a6faf0581c1efdfca44ef4ed645369" for ::1 at 2019-05-28 19:54:31 -0400
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" >= ? AND "mods"."id" < ? LIMIT ?[0m  [["id", 7], ["id", 10], ["LIMIT", 1]]
+  ↳ app/views/mods/index.html.erb:4
+Started GET "/mods" for ::1 at 2019-05-28 19:55:41 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.5ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `uniq' for "Mod 1":String):
+    1: <h1>Flatiron Mods</h1>
+    2: <ul>
+    3: <%= @mods.each do |mod| %>
+    4:   <li> <%= link_to mod.mod_description.uniq %></li>
+    5: <% end %>
+    6: 
+    7: </ul>
+  
+app/views/mods/index.html.erb:4:in `block in _app_views_mods_index_html_erb___4412301161604374899_70239822010340'
+app/views/mods/index.html.erb:3:in `_app_views_mods_index_html_erb___4412301161604374899_70239822010340'
+Started PUT "/__web_console/repl_sessions/4b030b9a5e73c5fe7222dd171684f766" for ::1 at 2019-05-28 19:55:46 -0400
+Started PUT "/__web_console/repl_sessions/4b030b9a5e73c5fe7222dd171684f766" for ::1 at 2019-05-28 19:55:51 -0400
+Started PUT "/__web_console/repl_sessions/4b030b9a5e73c5fe7222dd171684f766" for ::1 at 2019-05-28 19:55:55 -0400
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 11]]
+  ↳ /Users/ljc/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started PUT "/__web_console/repl_sessions/4b030b9a5e73c5fe7222dd171684f766" for ::1 at 2019-05-28 19:56:03 -0400
+Started PUT "/__web_console/repl_sessions/4b030b9a5e73c5fe7222dd171684f766" for ::1 at 2019-05-28 19:56:04 -0400
+Started PUT "/__web_console/repl_sessions/4b030b9a5e73c5fe7222dd171684f766" for ::1 at 2019-05-28 19:56:05 -0400
+Started PUT "/__web_console/repl_sessions/4b030b9a5e73c5fe7222dd171684f766" for ::1 at 2019-05-28 19:56:08 -0400
+Started PUT "/__web_console/repl_sessions/4b030b9a5e73c5fe7222dd171684f766" for ::1 at 2019-05-28 19:56:11 -0400
+Started PUT "/__web_console/repl_sessions/4b030b9a5e73c5fe7222dd171684f766" for ::1 at 2019-05-28 19:56:13 -0400
+Started GET "/mods" for ::1 at 2019-05-28 19:57:47 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.4ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `uniq' for "Mod 1":String):
+    2: <ul>
+    3: <%= @mods.each do |mod| %>
+    4: byebug
+    5:   <li> <%= link_to mod.mod_description.uniq %></li>
+    6: <% end %>
+    7: 
+    8: </ul>
+  
+app/views/mods/index.html.erb:5:in `block in _app_views_mods_index_html_erb___4412301161604374899_70239851843920'
+app/views/mods/index.html.erb:3:in `_app_views_mods_index_html_erb___4412301161604374899_70239851843920'
+Started GET "/mods" for ::1 at 2019-05-28 19:57:55 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.3ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 71ms (Views: 68.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mods" for ::1 at 2019-05-28 19:58:20 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 39ms (Views: 36.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mods" for ::1 at 2019-05-28 19:58:30 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.6ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 107ms (Views: 104.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/mods" for ::1 at 2019-05-28 19:58:32 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.6ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (79.2ms)
+Completed 200 OK in 138ms (Views: 135.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/mods" for ::1 at 2019-05-28 19:58:53 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.4ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 91ms (Views: 88.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mods" for ::1 at 2019-05-28 19:59:38 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.5ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 97ms (Views: 90.9ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "mods"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mInstructor Load (0.3ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mInstructor Destroy (0.6ms)[0m  [1m[31mDELETE FROM "instructors" WHERE "instructors"."id" = ?[0m  [["id", 42]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mInstructor Destroy (0.5ms)[0m  [1m[31mDELETE FROM "instructors" WHERE "instructors"."id" = ?[0m  [["id", 43]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mInstructor Destroy (0.5ms)[0m  [1m[31mDELETE FROM "instructors" WHERE "instructors"."id" = ?[0m  [["id", 44]]
+  ↳ db/seeds.rb:10
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mInstructor Destroy (0.7ms)[0m  [1m[31mDELETE FROM "instructors" WHERE "instructors"."id" = ?[0m  [["id", 45]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mNote Destroy (0.8ms)[0m  [1m[31mDELETE FROM "notes" WHERE "notes"."id" = ?[0m  [["id", 4]]
+  ↳ db/seeds.rb:11
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mNote Destroy (2.2ms)[0m  [1m[31mDELETE FROM "notes" WHERE "notes"."id" = ?[0m  [["id", 5]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mNote Destroy (0.5ms)[0m  [1m[31mDELETE FROM "notes" WHERE "notes"."id" = ?[0m  [["id", 6]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mNote Destroy (0.6ms)[0m  [1m[31mDELETE FROM "notes" WHERE "notes"."id" = ?[0m  [["id", 7]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mNote Destroy (0.6ms)[0m  [1m[31mDELETE FROM "notes" WHERE "notes"."id" = ?[0m  [["id", 8]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mNote Destroy (0.4ms)[0m  [1m[31mDELETE FROM "notes" WHERE "notes"."id" = ?[0m  [["id", 9]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mNote Destroy (0.5ms)[0m  [1m[31mDELETE FROM "notes" WHERE "notes"."id" = ?[0m  [["id", 10]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mNote Destroy (0.4ms)[0m  [1m[31mDELETE FROM "notes" WHERE "notes"."id" = ?[0m  [["id", 11]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mNote Destroy (0.5ms)[0m  [1m[31mDELETE FROM "notes" WHERE "notes"."id" = ?[0m  [["id", 12]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mNote Destroy (0.4ms)[0m  [1m[31mDELETE FROM "notes" WHERE "notes"."id" = ?[0m  [["id", 13]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mNote Destroy (0.4ms)[0m  [1m[31mDELETE FROM "notes" WHERE "notes"."id" = ?[0m  [["id", 14]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mNote Destroy (0.5ms)[0m  [1m[31mDELETE FROM "notes" WHERE "notes"."id" = ?[0m  [["id", 15]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mNote Destroy (0.7ms)[0m  [1m[31mDELETE FROM "notes" WHERE "notes"."id" = ?[0m  [["id", 16]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mNote Destroy (0.4ms)[0m  [1m[31mDELETE FROM "notes" WHERE "notes"."id" = ?[0m  [["id", 17]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mResource Load (0.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ db/seeds.rb:12
+  [1m[36mFollow Load (0.2ms)[0m  [1m[34mSELECT "follows".* FROM "follows"[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.4ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Jamie Howell"], ["created_at", "2019-05-29 00:01:47.604995"], ["updated_at", "2019-05-29 00:01:47.604995"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (2.0ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Willis Botsford MD"], ["created_at", "2019-05-29 00:01:47.628744"], ["updated_at", "2019-05-29 00:01:47.628744"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.7ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Tawnya Witting"], ["created_at", "2019-05-29 00:01:47.694563"], ["updated_at", "2019-05-29 00:01:47.694563"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.7ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Brice Swaniawski"], ["created_at", "2019-05-29 00:01:47.703482"], ["updated_at", "2019-05-29 00:01:47.703482"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.8ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Marna Crona"], ["created_at", "2019-05-29 00:01:47.708970"], ["updated_at", "2019-05-29 00:01:47.708970"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.7ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Maragret Lowe"], ["created_at", "2019-05-29 00:01:47.714828"], ["updated_at", "2019-05-29 00:01:47.714828"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Chance Gutmann"], ["created_at", "2019-05-29 00:01:47.720156"], ["updated_at", "2019-05-29 00:01:47.720156"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Mrs. Destiny Homenick"], ["created_at", "2019-05-29 00:01:47.724264"], ["updated_at", "2019-05-29 00:01:47.724264"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.4ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Gudrun Hauck DDS"], ["created_at", "2019-05-29 00:01:47.728802"], ["updated_at", "2019-05-29 00:01:47.728802"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Isaiah Armstrong"], ["created_at", "2019-05-29 00:01:47.733152"], ["updated_at", "2019-05-29 00:01:47.733152"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[36mInstructor Create (0.5ms)[0m  [1m[32mINSERT INTO "instructors" ("name", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Kevin"], ["mod_id", 1], ["created_at", "2019-05-29 00:01:47.787437"], ["updated_at", "2019-05-29 00:01:47.787437"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[36mInstructor Create (0.6ms)[0m  [1m[32mINSERT INTO "instructors" ("name", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Graham"], ["mod_id", 1], ["created_at", "2019-05-29 00:01:47.798073"], ["updated_at", "2019-05-29 00:01:47.798073"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mInstructor Create (0.5ms)[0m  [1m[32mINSERT INTO "instructors" ("name", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Helen"], ["mod_id", 2], ["created_at", "2019-05-29 00:01:47.807782"], ["updated_at", "2019-05-29 00:01:47.807782"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mInstructor Create (0.5ms)[0m  [1m[32mINSERT INTO "instructors" ("name", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Dan"], ["mod_id", 2], ["created_at", "2019-05-29 00:01:47.817263"], ["updated_at", "2019-05-29 00:01:47.817263"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.5ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "Hashketball Review"], ["student_id", 41], ["mod_id", 1], ["created_at", "2019-05-29 00:01:47.857498"], ["updated_at", "2019-05-29 00:01:47.857498"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.7ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "Hashes and the Internet"], ["student_id", 41], ["mod_id", 1], ["created_at", "2019-05-29 00:01:47.865276"], ["updated_at", "2019-05-29 00:01:47.865276"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.5ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "Intro to Object-Oriented Programming"], ["student_id", 41], ["mod_id", 1], ["created_at", "2019-05-29 00:01:47.872128"], ["updated_at", "2019-05-29 00:01:47.872128"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.6ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "Object Relationships: One to Many"], ["student_id", 41], ["mod_id", 1], ["created_at", "2019-05-29 00:01:47.879005"], ["updated_at", "2019-05-29 00:01:47.879005"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.6ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "Object Relationships — Many to Many"], ["student_id", 41], ["mod_id", 1], ["created_at", "2019-05-29 00:01:47.887532"], ["updated_at", "2019-05-29 00:01:47.887532"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.5ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "SQL Review"], ["student_id", 41], ["mod_id", 1], ["created_at", "2019-05-29 00:01:47.896160"], ["updated_at", "2019-05-29 00:01:47.896160"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.4ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "Intro to ActiveRecord"], ["student_id", 41], ["mod_id", 1], ["created_at", "2019-05-29 00:01:47.902881"], ["updated_at", "2019-05-29 00:01:47.902881"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.4ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "ActiveRecord Associations"], ["student_id", 41], ["mod_id", 1], ["created_at", "2019-05-29 00:01:47.908861"], ["updated_at", "2019-05-29 00:01:47.908861"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.4ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "Rack and the Internet"], ["student_id", 41], ["mod_id", 1], ["created_at", "2019-05-29 00:01:47.915008"], ["updated_at", "2019-05-29 00:01:47.915008"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.4ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "Intro to Sinatra and MVC"], ["student_id", 41], ["mod_id", 1], ["created_at", "2019-05-29 00:01:47.921645"], ["updated_at", "2019-05-29 00:01:47.921645"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.4ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "Forms"], ["student_id", 41], ["mod_id", 1], ["created_at", "2019-05-29 00:01:47.928686"], ["updated_at", "2019-05-29 00:01:47.928686"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.4ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "Sinatra REST I (CR)"], ["student_id", 41], ["mod_id", 1], ["created_at", "2019-05-29 00:01:47.934976"], ["updated_at", "2019-05-29 00:01:47.934976"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.5ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "Sinatra REST II (UD)"], ["student_id", 41], ["mod_id", 1], ["created_at", "2019-05-29 00:01:47.941046"], ["updated_at", "2019-05-29 00:01:47.941046"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.7ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "Sinatra Relationships"], ["student_id", 41], ["mod_id", 1], ["created_at", "2019-05-29 00:01:47.947536"], ["updated_at", "2019-05-29 00:01:47.947536"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "mods"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "follows"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "follows" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "student_id" integer, "resource_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "instructors"[0m
+  ↳ db/schema.rb:22
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "instructors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "mod" integer, "mod_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "mods"[0m
+  ↳ db/schema.rb:30
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "mods" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "mod_number" integer, "mod_description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "notes"[0m
+  ↳ db/schema.rb:37
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "notes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "lecture_name" varchar, "content" varchar, "highlights" varchar, "student_id" integer, "mod_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:37
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "resources"[0m
+  ↳ db/schema.rb:47
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "resources" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "links" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "students"[0m
+  ↳ db/schema.rb:53
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "mod_name" varchar, "mod_start_date" varchar, "github_link" varchar, "linkedin_link" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:53
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190528202019)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190528193632),
+(20190528193603),
+(20190528201809),
+(20190528201708),
+(20190528193728);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-29 00:02:38.932978"], ["updated_at", "2019-05-29 00:02:38.932978"]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "follows"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "follows" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "student_id" integer, "resource_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "instructors"[0m
+  ↳ db/schema.rb:22
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "instructors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "mod" integer, "mod_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "mods"[0m
+  ↳ db/schema.rb:30
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "mods" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "mod_number" integer, "mod_description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "notes"[0m
+  ↳ db/schema.rb:37
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "notes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "lecture_name" varchar, "content" varchar, "highlights" varchar, "student_id" integer, "mod_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "resources"[0m
+  ↳ db/schema.rb:47
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "resources" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "links" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "students"[0m
+  ↳ db/schema.rb:53
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "mod_name" varchar, "mod_start_date" varchar, "github_link" varchar, "linkedin_link" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:53
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190528202019)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190528193632),
+(20190528193603),
+(20190528201809),
+(20190528201708),
+(20190528193728);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-29 00:02:39.079036"], ["updated_at", "2019-05-29 00:02:39.079036"]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Update (0.8ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2019-05-29 00:02:39.087424"], ["key", "environment"]]
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mInstructor Load (0.2ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ db/seeds.rb:11
+  [1m[36mResource Load (0.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ db/seeds.rb:12
+  [1m[36mFollow Load (0.2ms)[0m  [1m[34mSELECT "follows".* FROM "follows"[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.4ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Shani Quitzon"], ["created_at", "2019-05-29 00:02:39.459453"], ["updated_at", "2019-05-29 00:02:39.459453"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.4ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Jimmy Gorczany"], ["created_at", "2019-05-29 00:02:39.464629"], ["updated_at", "2019-05-29 00:02:39.464629"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.7ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Tammera Huels IV"], ["created_at", "2019-05-29 00:02:39.469559"], ["updated_at", "2019-05-29 00:02:39.469559"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Krissy Bernier"], ["created_at", "2019-05-29 00:02:39.476455"], ["updated_at", "2019-05-29 00:02:39.476455"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Felicita Vandervort"], ["created_at", "2019-05-29 00:02:39.482883"], ["updated_at", "2019-05-29 00:02:39.482883"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Elodia Marquardt"], ["created_at", "2019-05-29 00:02:39.486735"], ["updated_at", "2019-05-29 00:02:39.486735"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Marvin Cassin"], ["created_at", "2019-05-29 00:02:39.491646"], ["updated_at", "2019-05-29 00:02:39.491646"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Harmony Schneider"], ["created_at", "2019-05-29 00:02:39.495623"], ["updated_at", "2019-05-29 00:02:39.495623"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.4ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Mr. Latarsha Hagenes"], ["created_at", "2019-05-29 00:02:39.499347"], ["updated_at", "2019-05-29 00:02:39.499347"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Caleb Doyle"], ["created_at", "2019-05-29 00:02:39.502771"], ["updated_at", "2019-05-29 00:02:39.502771"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "follows"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "follows" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "student_id" integer, "resource_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "instructors"[0m
+  ↳ db/schema.rb:22
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "instructors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "mod" integer, "mod_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "mods"[0m
+  ↳ db/schema.rb:30
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "mods" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "mod_number" integer, "mod_description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "notes"[0m
+  ↳ db/schema.rb:37
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "notes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "lecture_name" varchar, "content" varchar, "highlights" varchar, "student_id" integer, "mod_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:37
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "resources"[0m
+  ↳ db/schema.rb:47
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "resources" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "links" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "students"[0m
+  ↳ db/schema.rb:53
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "mod_name" varchar, "mod_start_date" varchar, "github_link" varchar, "linkedin_link" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:53
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190528202019)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190528193632),
+(20190528193603),
+(20190528201809),
+(20190528201708),
+(20190528193728);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-29 00:03:16.206466"], ["updated_at", "2019-05-29 00:03:16.206466"]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "follows"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "follows" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "student_id" integer, "resource_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "instructors"[0m
+  ↳ db/schema.rb:22
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "instructors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "mod" integer, "mod_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "mods"[0m
+  ↳ db/schema.rb:30
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "mods" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "mod_number" integer, "mod_description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "notes"[0m
+  ↳ db/schema.rb:37
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "notes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "lecture_name" varchar, "content" varchar, "highlights" varchar, "student_id" integer, "mod_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:37
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "resources"[0m
+  ↳ db/schema.rb:47
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "resources" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "links" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "students"[0m
+  ↳ db/schema.rb:53
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "mod_name" varchar, "mod_start_date" varchar, "github_link" varchar, "linkedin_link" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:53
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190528202019)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190528193632),
+(20190528193603),
+(20190528201809),
+(20190528201708),
+(20190528193728);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-29 00:03:16.281004"], ["updated_at", "2019-05-29 00:03:16.281004"]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Update (0.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2019-05-29 00:03:16.286657"], ["key", "environment"]]
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mInstructor Load (0.2ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ db/seeds.rb:11
+  [1m[36mResource Load (0.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ db/seeds.rb:12
+  [1m[36mFollow Load (0.2ms)[0m  [1m[34mSELECT "follows".* FROM "follows"[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mMod Create (0.5ms)[0m  [1m[32mINSERT INTO "mods" ("mod_number", "mod_description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["mod_number", 1], ["mod_description", "Mod 1"], ["created_at", "2019-05-29 00:03:16.328811"], ["updated_at", "2019-05-29 00:03:16.328811"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mMod Create (0.6ms)[0m  [1m[32mINSERT INTO "mods" ("mod_number", "mod_description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["mod_number", 2], ["mod_description", "Mod 2"], ["created_at", "2019-05-29 00:03:16.338308"], ["updated_at", "2019-05-29 00:03:16.338308"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mMod Create (0.5ms)[0m  [1m[32mINSERT INTO "mods" ("mod_number", "mod_description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["mod_number", 3], ["mod_description", "Mod 3"], ["created_at", "2019-05-29 00:03:16.345377"], ["updated_at", "2019-05-29 00:03:16.345377"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mMod Create (0.6ms)[0m  [1m[32mINSERT INTO "mods" ("mod_number", "mod_description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["mod_number", 4], ["mod_description", "Mod 4"], ["created_at", "2019-05-29 00:03:16.349959"], ["updated_at", "2019-05-29 00:03:16.349959"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mMod Create (0.4ms)[0m  [1m[32mINSERT INTO "mods" ("mod_number", "mod_description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["mod_number", 5], ["mod_description", "Mod 5"], ["created_at", "2019-05-29 00:03:16.354763"], ["updated_at", "2019-05-29 00:03:16.354763"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Lynetta Lowe"], ["created_at", "2019-05-29 00:03:16.530882"], ["updated_at", "2019-05-29 00:03:16.530882"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Velma Schuppe"], ["created_at", "2019-05-29 00:03:16.536484"], ["updated_at", "2019-05-29 00:03:16.536484"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.9ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ms. Ellena Hansen"], ["created_at", "2019-05-29 00:03:16.543241"], ["updated_at", "2019-05-29 00:03:16.543241"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Dr. Santo Nikolaus"], ["created_at", "2019-05-29 00:03:16.549867"], ["updated_at", "2019-05-29 00:03:16.549867"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "My Senger"], ["created_at", "2019-05-29 00:03:16.555015"], ["updated_at", "2019-05-29 00:03:16.555015"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (1.2ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Otha Rau"], ["created_at", "2019-05-29 00:03:16.560067"], ["updated_at", "2019-05-29 00:03:16.560067"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Sharita West"], ["created_at", "2019-05-29 00:03:16.567241"], ["updated_at", "2019-05-29 00:03:16.567241"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Sung Kuvalis"], ["created_at", "2019-05-29 00:03:16.574096"], ["updated_at", "2019-05-29 00:03:16.574096"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (1.0ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Sung Hoeger"], ["created_at", "2019-05-29 00:03:16.579023"], ["updated_at", "2019-05-29 00:03:16.579023"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Stefan Glover II"], ["created_at", "2019-05-29 00:03:16.584146"], ["updated_at", "2019-05-29 00:03:16.584146"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mMod Load (0.3ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[36mInstructor Create (0.5ms)[0m  [1m[32mINSERT INTO "instructors" ("name", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Kevin"], ["mod_id", 1], ["created_at", "2019-05-29 00:03:16.606731"], ["updated_at", "2019-05-29 00:03:16.606731"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[36mInstructor Create (0.6ms)[0m  [1m[32mINSERT INTO "instructors" ("name", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Graham"], ["mod_id", 1], ["created_at", "2019-05-29 00:03:16.611459"], ["updated_at", "2019-05-29 00:03:16.611459"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mInstructor Create (0.5ms)[0m  [1m[32mINSERT INTO "instructors" ("name", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Helen"], ["mod_id", 2], ["created_at", "2019-05-29 00:03:16.616408"], ["updated_at", "2019-05-29 00:03:16.616408"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mInstructor Create (0.4ms)[0m  [1m[32mINSERT INTO "instructors" ("name", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Dan"], ["mod_id", 2], ["created_at", "2019-05-29 00:03:16.621626"], ["updated_at", "2019-05-29 00:03:16.621626"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:50
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.6ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "Hashketball Review"], ["student_id", 1], ["mod_id", 1], ["created_at", "2019-05-29 00:03:16.640451"], ["updated_at", "2019-05-29 00:03:16.640451"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.4ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "Hashes and the Internet"], ["student_id", 1], ["mod_id", 1], ["created_at", "2019-05-29 00:03:16.654560"], ["updated_at", "2019-05-29 00:03:16.654560"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.4ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "Intro to Object-Oriented Programming"], ["student_id", 1], ["mod_id", 1], ["created_at", "2019-05-29 00:03:16.663105"], ["updated_at", "2019-05-29 00:03:16.663105"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.8ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "Object Relationships: One to Many"], ["student_id", 1], ["mod_id", 1], ["created_at", "2019-05-29 00:03:16.696992"], ["updated_at", "2019-05-29 00:03:16.696992"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.4ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "Object Relationships — Many to Many"], ["student_id", 1], ["mod_id", 1], ["created_at", "2019-05-29 00:03:16.703362"], ["updated_at", "2019-05-29 00:03:16.703362"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.4ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "SQL Review"], ["student_id", 1], ["mod_id", 1], ["created_at", "2019-05-29 00:03:16.709348"], ["updated_at", "2019-05-29 00:03:16.709348"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.6ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "Intro to ActiveRecord"], ["student_id", 1], ["mod_id", 1], ["created_at", "2019-05-29 00:03:16.715041"], ["updated_at", "2019-05-29 00:03:16.715041"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.5ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "ActiveRecord Associations"], ["student_id", 1], ["mod_id", 1], ["created_at", "2019-05-29 00:03:16.722384"], ["updated_at", "2019-05-29 00:03:16.722384"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.4ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "Rack and the Internet"], ["student_id", 1], ["mod_id", 1], ["created_at", "2019-05-29 00:03:16.729799"], ["updated_at", "2019-05-29 00:03:16.729799"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.4ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "Intro to Sinatra and MVC"], ["student_id", 1], ["mod_id", 1], ["created_at", "2019-05-29 00:03:16.736945"], ["updated_at", "2019-05-29 00:03:16.736945"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (1.0ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "Forms"], ["student_id", 1], ["mod_id", 1], ["created_at", "2019-05-29 00:03:16.743411"], ["updated_at", "2019-05-29 00:03:16.743411"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.4ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "Sinatra REST I (CR)"], ["student_id", 1], ["mod_id", 1], ["created_at", "2019-05-29 00:03:16.754381"], ["updated_at", "2019-05-29 00:03:16.754381"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.4ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "Sinatra REST II (UD)"], ["student_id", 1], ["mod_id", 1], ["created_at", "2019-05-29 00:03:16.760455"], ["updated_at", "2019-05-29 00:03:16.760455"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[36mNote Create (0.4ms)[0m  [1m[32mINSERT INTO "notes" ("lecture_name", "student_id", "mod_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["lecture_name", "Sinatra Relationships"], ["student_id", 1], ["mod_id", 1], ["created_at", "2019-05-29 00:03:16.766667"], ["updated_at", "2019-05-29 00:03:16.766667"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:86
+  [1m[36mMod Load (0.7ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/mods" for ::1 at 2019-05-28 20:03:46 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 83ms (Views: 80.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mods" for ::1 at 2019-05-28 20:03:48 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 55ms (Views: 52.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mods" for ::1 at 2019-05-28 20:03:51 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 39ms (Views: 36.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mods" for ::1 at 2019-05-28 20:03:51 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.4ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 55ms (Views: 51.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mods" for ::1 at 2019-05-28 20:04:14 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ljc/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 468ms (Views: 447.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/mods" for ::1 at 2019-05-28 20:04:55 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 58ms (Views: 55.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mods" for ::1 at 2019-05-28 20:04:55 -0400
+Processing by ModsController#index as HTML
+  Rendering mods/index.html.erb within layouts/application
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/mods/index.html.erb:3
+  Rendered mods/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 67ms (Views: 65.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mods/1" for ::1 at 2019-05-28 20:05:32 -0400
+Processing by ModsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering mods/show.html.erb within layouts/application
+  Rendered mods/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 59ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
