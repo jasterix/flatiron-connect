@@ -15,19 +15,17 @@ Follow.destroy_all
 require 'faker'
 
 #MODS-------------------------------------------------------------------
-# mods = [1, 2, 3, 4, 5]
-# mods.map do |x|
-#   Mod.create(mod_number:x, mod_description: "Mod #{x}")
-# end
+mods = [1, 2, 3, 4, 5]
+mods.map do |x|
+  Mod.create(mod_number:x, mod_description: "Mod #{x}")
+end
 
 #FOLLOWS-------------------------------------------------------------------
 # Follow.create(student: , resource: )
 #
-# student.resources <<
+
 
 #STUDENT-------------------------------------------------------------------
-
-student_ids = [31, 32, 33, 34, 35, 36, 37, 38, 39, 40]
 #
 student_names = []
 10.times do
@@ -37,8 +35,6 @@ end
 student_names.map do |student_name|
   Student.create(name: student_name)
 end
-
-
 
 
 #INSTRUCTOR-----------------------------------------------------------------

@@ -1,2 +1,7 @@
-<h1>Mods#index</h1>
-<p>Find me in app/views/mods/index.html.erb</p>
+<h1>Flatiron Mods</h1>
+<ul>
+<%= @mods.each do |mod| %>
+  <li> <%= link_to mod.mod_description %></li>
+<% end %>
+
+</ul>
