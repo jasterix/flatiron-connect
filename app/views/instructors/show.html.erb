@@ -1,6 +1,7 @@
 <h1><%= @instructor.name %></h1>
 <ul>
-
-  <li><%= link_to @instructor.mod_id, mod_path(@instructor.mod_id) %></li>
+  <%= @instructor.mods.each do |mod| %>
+  <li><%= link_to mod.mod_number, mod_path(mod) %></li>
+  <% end %>
 
 </ul>
