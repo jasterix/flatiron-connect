@@ -1,2 +1,8 @@
-<h1>Mods#show</h1>
-<p>Find me in app/views/mods/show.html.erb</p>
+<h1> <%= @mod.mod_description %>'s Lectures </h1>
+<p>
+<ul>
+<% @mod.notes.where(mod_id:1).map do |note|%>
+  <%= link_to note.lecture_name, note_path(note) %><br>
+<% end %>
+</ul>
+</p>
