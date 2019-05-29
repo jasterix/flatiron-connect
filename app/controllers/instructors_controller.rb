@@ -22,7 +22,7 @@ class InstructorsController < ApplicationController
   end
 
   def update
-    @instructor = Instructor.update(instructor_params)
+    @instructor.update(instructor_params)
     if @instructor.valid?
       @instructor.save
       redirect_to @instructor

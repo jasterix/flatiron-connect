@@ -72,3 +72,21 @@ Migrating to CreateMods (20190528202019)
   ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/ljc/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Started GET "/" for ::1 at 2019-05-28 19:44:28 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnhill/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/johnhill/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/johnhill/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (50.2ms)
+Completed 200 OK in 243ms (Views: 74.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/instructors" for ::1 at 2019-05-28 19:44:33 -0400
+Processing by InstructorsController#index as HTML
+  Rendering instructors/index.html.erb within layouts/application
+  [1m[36mInstructor Load (1.2ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  ↳ app/views/instructors/index.html.erb:3
+  Rendered instructors/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 2089ms (Views: 1942.3ms | ActiveRecord: 1.5ms)
+
+

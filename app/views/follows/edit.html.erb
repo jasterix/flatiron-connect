@@ -1,0 +1,8 @@
+<h1>Update Follows</h1>
+<%= form_for @follow do |f| %>
+<%= f.label :mod_id %>
+<%= f.collection_select :mod_id, Mod.all, :id, :mod_number %>
+<%= f.label :student_id %>
+<%= f.collection_select :student_id, Student.all, :id, :name %>
+<%= f.submit %>
+<% end %>
