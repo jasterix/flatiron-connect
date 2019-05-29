@@ -10,9 +10,9 @@ class NotesController < ApplicationController
   end
 
   def create
-    @note = Note.create(note_params)
+    @note = Note.new(note_params)
     if @note.valid?
-      # @note.save
+      @note.save
       redirect_to @note
     else
       flash[:error] = @note.errors.full_messages
