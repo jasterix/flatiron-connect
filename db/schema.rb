@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_28_202019) do
+ActiveRecord::Schema.define(version: 2019_05_29_145248) do
 
   create_table "follows", force: :cascade do |t|
     t.integer "student_id"
@@ -21,14 +21,13 @@ ActiveRecord::Schema.define(version: 2019_05_28_202019) do
 
   create_table "instructors", force: :cascade do |t|
     t.string "name"
-    t.integer "mod"
     t.integer "mod_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "mods", force: :cascade do |t|
-    t.integer "mod_number"
+    t.string "mod_number"
     t.string "mod_description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
