@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2019_05_29_161213) do
+=======
+ActiveRecord::Schema.define(version: 2019_05_29_182626) do
+>>>>>>> edit_tabels
 
   create_table "follows", force: :cascade do |t|
     t.integer "student_id"
@@ -60,7 +64,7 @@ ActiveRecord::Schema.define(version: 2019_05_29_161213) do
   create_table "students", force: :cascade do |t|
     t.string "name"
     t.string "mod_name"
-    t.string "mod_start_date"
+    t.datetime "mod_start_date"
     t.string "github_link"
     t.string "linkedin_link"
     t.datetime "created_at", null: false

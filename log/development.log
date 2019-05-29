@@ -5604,6 +5604,7 @@ Did you mean?  mod_ids
     6: </ul>
   
 app/views/instructors/show.html.erb:4:in `_app_views_instructors_show_html_erb__2754857758739225089_70126497025460'
+<<<<<<< HEAD
 >>>>>>> edit_tabels
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
@@ -5627,11 +5628,34 @@ Migrating to RenameInstructModTables (20190529161213)
   ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+=======
+Started GET "/" for ::1 at 2019-05-29 14:23:39 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnhill/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/johnhill/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/johnhill/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (4.7ms)
+Completed 200 OK in 38ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 14:23:47 -0400
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:3
+  Rendered students/index.html.erb within layouts/application (48.7ms)
+Completed 200 OK in 426ms (Views: 413.2ms | ActiveRecord: 1.9ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+>>>>>>> edit_tabels
 Migrating to RenameInstructModTables (20190529161213)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:3
+<<<<<<< HEAD
   [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ainstruct_mods" ("id" integer NOT NULL PRIMARY KEY, "mod_id" integer DEFAULT NULL, "instructors_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
   ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:3
   [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "tindex_ainstruct_mods_on_instructors_id" ON "ainstruct_mods" ("instructors_id")[0m
@@ -5646,12 +5670,29 @@ Migrating to RenameInstructModTables (20190529161213)
   [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "instruct_mods" ("id" integer NOT NULL PRIMARY KEY, "mod_id" integer DEFAULT NULL, "instructors_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
   ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:3
   [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_instruct_mods_on_mods_id" ON "instruct_mods" ("mod_id")[0m
+=======
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ainstruct_mods" ("id" integer NOT NULL PRIMARY KEY, "mod_id" integer DEFAULT NULL, "instructors_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_ainstruct_mods_on_instructors_id" ON "ainstruct_mods" ("instructors_id")[0m
+  ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_ainstruct_mods_on_mods_id" ON "ainstruct_mods" ("mod_id")[0m
+  ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ainstruct_mods" ("id","mod_id","instructors_id","created_at","updated_at")
+                     SELECT "id","mods_id","instructors_id","created_at","updated_at" FROM "instruct_mods"[0m
+  ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "instruct_mods"[0m
+  ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "instruct_mods" ("id" integer NOT NULL PRIMARY KEY, "mod_id" integer DEFAULT NULL, "instructors_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_instruct_mods_on_mods_id" ON "instruct_mods" ("mod_id")[0m
+>>>>>>> edit_tabels
   ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:3
   [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_instruct_mods_on_instructors_id" ON "instruct_mods" ("instructors_id")[0m
   ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:3
   [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "instruct_mods" ("id","mod_id","instructors_id","created_at","updated_at")
                      SELECT "id","mod_id","instructors_id","created_at","updated_at" FROM "ainstruct_mods"[0m
   ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:3
+<<<<<<< HEAD
   [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "ainstruct_mods"[0m
   ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:3
   [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_instruct_mods_on_mod_id" ON "instruct_mods" ("mod_id")[0m
@@ -5663,10 +5704,24 @@ Migrating to RenameInstructModTables (20190529161213)
   [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "tindex_ainstruct_mods_on_mod_id" ON "ainstruct_mods" ("mod_id")[0m
   ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:4
   [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "tindex_ainstruct_mods_on_instructors_id" ON "ainstruct_mods" ("instructor_id")[0m
+=======
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ainstruct_mods"[0m
+  ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_instruct_mods_on_mod_id" ON "instruct_mods" ("mod_id")[0m
+  ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mDROP INDEX "index_instruct_mods_on_mods_id"[0m
+  ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ainstruct_mods" ("id" integer NOT NULL PRIMARY KEY, "mod_id" integer DEFAULT NULL, "instructor_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "tindex_ainstruct_mods_on_mod_id" ON "ainstruct_mods" ("mod_id")[0m
+  ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:4
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "tindex_ainstruct_mods_on_instructors_id" ON "ainstruct_mods" ("instructor_id")[0m
+>>>>>>> edit_tabels
   ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:4
   [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ainstruct_mods" ("id","mod_id","instructor_id","created_at","updated_at")
                      SELECT "id","mod_id","instructors_id","created_at","updated_at" FROM "instruct_mods"[0m
   ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:4
+<<<<<<< HEAD
   [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "instruct_mods"[0m
   ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:4
   [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "instruct_mods" ("id" integer NOT NULL PRIMARY KEY, "mod_id" integer DEFAULT NULL, "instructor_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
@@ -5674,10 +5729,20 @@ Migrating to RenameInstructModTables (20190529161213)
   [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_instruct_mods_on_instructors_id" ON "instruct_mods" ("instructor_id")[0m
   ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:4
   [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_instruct_mods_on_mod_id" ON "instruct_mods" ("mod_id")[0m
+=======
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "instruct_mods"[0m
+  ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "instruct_mods" ("id" integer NOT NULL PRIMARY KEY, "mod_id" integer DEFAULT NULL, "instructor_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_instruct_mods_on_instructors_id" ON "instruct_mods" ("instructor_id")[0m
+  ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_instruct_mods_on_mod_id" ON "instruct_mods" ("mod_id")[0m
+>>>>>>> edit_tabels
   ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:4
   [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "instruct_mods" ("id","mod_id","instructor_id","created_at","updated_at")
                      SELECT "id","mod_id","instructor_id","created_at","updated_at" FROM "ainstruct_mods"[0m
   ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:4
+<<<<<<< HEAD
   [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "ainstruct_mods"[0m
   ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:4
   [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_instruct_mods_on_instructor_id" ON "instruct_mods" ("instructor_id")[0m
@@ -5696,3 +5761,77 @@ Migrating to RenameInstructModTables (20190529161213)
   ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+=======
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ainstruct_mods"[0m
+  ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_instruct_mods_on_instructor_id" ON "instruct_mods" ("instructor_id")[0m
+  ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mDROP INDEX "index_instruct_mods_on_instructors_id"[0m
+  ↳ db/migrate/20190529161213_rename_instruct_mod_tables.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190529161213"]]
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (16.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to ChangeStartDateToDateTime (20190529182626)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "astudents" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "mod_name" varchar DEFAULT NULL, "mod_start_date" varchar DEFAULT NULL, "github_link" varchar DEFAULT NULL, "linkedin_link" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190529182626_change_start_date_to_date_time.rb:3
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "astudents" ("id","name","mod_name","mod_start_date","github_link","linkedin_link","created_at","updated_at")
+                     SELECT "id","name","mod_name","mod_start_date","github_link","linkedin_link","created_at","updated_at" FROM "students"[0m
+  ↳ db/migrate/20190529182626_change_start_date_to_date_time.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "students"[0m
+  ↳ db/migrate/20190529182626_change_start_date_to_date_time.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "mod_name" varchar DEFAULT NULL, "mod_start_date" datetime DEFAULT NULL, "github_link" varchar DEFAULT NULL, "linkedin_link" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190529182626_change_start_date_to_date_time.rb:3
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "students" ("id","name","mod_name","mod_start_date","github_link","linkedin_link","created_at","updated_at")
+                     SELECT "id","name","mod_name","mod_start_date","github_link","linkedin_link","created_at","updated_at" FROM "astudents"[0m
+  ↳ db/migrate/20190529182626_change_start_date_to_date_time.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "astudents"[0m
+  ↳ db/migrate/20190529182626_change_start_date_to_date_time.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190529182626"]]
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnhill/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Started GET "/instructors" for ::1 at 2019-05-29 14:29:55 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnhill/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by InstructorsController#index as HTML
+  Rendering instructors/index.html.erb within layouts/application
+  [1m[36mInstructor Load (0.3ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  ↳ app/views/instructors/index.html.erb:3
+  Rendered instructors/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 313ms (Views: 201.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/instructors/1" for ::1 at 2019-05-29 14:29:57 -0400
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInstructor Load (0.2ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:42
+  Rendering instructors/show.html.erb within layouts/application
+  Rendered instructors/show.html.erb within layouts/application (22.1ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `mod_id' for #<Instructor:0x00007fc1acdb53d8>
+Did you mean?  mod_ids
+               mod_ids=):
+    1: <h1><%= @instructor.name %></h1>
+    2: <ul>
+    3: 
+    4:   <li><%= link_to @instructor.mod_id, mod_path(@instructor.mod_id) %></li>
+    5: 
+    6: </ul>
+  
+app/views/instructors/show.html.erb:4:in `_app_views_instructors_show_html_erb___1358617963514763951_70234902733020'
+>>>>>>> edit_tabels
