@@ -5302,9 +5302,170 @@ Completed 200 OK in 63ms (Views: 57.7ms | ActiveRecord: 0.4ms)
 
 >>>>>>> students
 >>>>>>> acc4ef084ae2706e24fa186a100195d80f9487bd
+<<<<<<< HEAD
   [1m[36mStudent Load (1.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mNote Load (1.4ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."student_id" = ? LIMIT ?[0m  [["student_id", 1], ["LIMIT", 11]]
   [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."student_id" = ?[0m  [["student_id", 1]]
+=======
+Started GET "/songs" for ::1 at 2019-05-29 10:21:11 -0400
+Started GET "/students" for ::1 at 2019-05-29 10:21:11 -0400
+  [1m[35m (19.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnhill/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/johnhill/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/songs"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (50.6ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:3
+  Rendered students/index.html.erb within layouts/application (113.6ms)
+Completed 200 OK in 944ms (Views: 873.5ms | ActiveRecord: 51.3ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-05-29 10:21:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/students/1" for ::1 at 2019-05-29 10:21:21 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:47
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `notes' for nil:NilClass):
+     5:   Linked In: <%= @student.linkedin_link %>
+     6:   <h2>Notes:</h2>
+     7:   <ul>
+     8:     <%= @students.notes.each do |note|  %>
+     9:     <li><%= link_to note.lecture_name, note_path(note) %></li>
+    10:     <% end %>
+    11: 
+  
+app/views/students/show.html.erb:8:in `_app_views_students_show_html_erb___2764109960471312136_70217449922840'
+Started PUT "/__web_console/repl_sessions/1943db2b875610110ec446f73de2c30c" for ::1 at 2019-05-29 10:21:51 -0400
+Started PUT "/__web_console/repl_sessions/1943db2b875610110ec446f73de2c30c" for ::1 at 2019-05-29 10:21:53 -0400
+Started PUT "/__web_console/repl_sessions/1943db2b875610110ec446f73de2c30c" for ::1 at 2019-05-29 10:22:06 -0400
+Started PUT "/__web_console/repl_sessions/1943db2b875610110ec446f73de2c30c" for ::1 at 2019-05-29 10:22:10 -0400
+Started PUT "/__web_console/repl_sessions/1943db2b875610110ec446f73de2c30c" for ::1 at 2019-05-29 10:22:12 -0400
+  [1m[36mNote Load (3.8ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."student_id" = ? LIMIT ?[0m  [["student_id", 1], ["LIMIT", 11]]
+  ↳ /Users/johnhill/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/students/1" for ::1 at 2019-05-29 10:22:36 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (1.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:47
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."student_id" = ?[0m  [["student_id", 1]]
+  ↳ app/views/students/show.html.erb:8
+  Rendered students/show.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 59ms (Views: 53.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/students/1" for ::1 at 2019-05-29 10:22:57 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:47
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."student_id" = ?[0m  [["student_id", 1]]
+  ↳ app/views/students/show.html.erb:8
+  Rendered students/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 57ms (Views: 54.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/notes/10" for ::1 at 2019-05-29 10:23:09 -0400
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:43
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 31.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 10:23:43 -0400
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:3
+  Rendered students/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 50ms (Views: 47.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/2" for ::1 at 2019-05-29 10:23:44 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:47
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."student_id" = ?[0m  [["student_id", 2]]
+  ↳ app/views/students/show.html.erb:8
+  Rendered students/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 41ms (Views: 37.1ms | ActiveRecord: 0.4ms)
+
+
+>>>>>>> 68e2c872f1b172cb6e8300010f1777bd26bf1293
