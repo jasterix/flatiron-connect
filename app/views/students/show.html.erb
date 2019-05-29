@@ -3,4 +3,11 @@
   Mod Start Date: <%= @student.mod_start_date %><br>
   GitHub: <%= @student.github_link %><br>
   Linked In: <%= @student.linkedin_link %>
+  <h2>Notes:</h2>
+  <ul>
+    <%= @students.notes.each do |note|  %>
+    <li><%= link_to note.lecture_name, note_path(note) %></li>
+    <% end %>
+
+  </ul>
 </p>
