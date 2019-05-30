@@ -5,7 +5,8 @@
   Linked In: <%= @student.linkedin_link %>
   <h2>Notes:</h2>
   <ul>
-    <% @student.notes.each do |note|  %>
+    
+    <% @student.notes.where.not(content:nil).each do |note|  %>
     <li><%= link_to note.lecture_name, note_path(note) %></li>
     <% end %>
 

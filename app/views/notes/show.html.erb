@@ -1,12 +1,18 @@
 <h1> <%= @note.lecture_name %> Notes</h1>
 
-
-Things to keep in mind: <%= @note.highlights %>
+<%= @note.student.name %>'s Notes for <u><%=@note.lecture_name%></u> <br><br>
+<b>Things to keep in mind: </b><%= @note.highlights %>
 <hr>
 
-<h3><%= @note.student.name %>'s Notes<br></h3>
-<% Note.all.each do |note| %>
-  <%= note.content %>
+
+
+
+<div>
+  Notes:<br>
+
+<% Note.all.where.not(content:nil).map do |note|%>
+  <%= simple_format(note.content) %><br>
 <% end %>
+<em>created: <%= @note.created_at.strftime("%m/%d/%Y at %I:%M%p") %></em><br>
 <hr>
-<em>Created: <%= @note.created_at %><br></em>
+</div>

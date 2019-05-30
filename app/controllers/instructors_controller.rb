@@ -35,7 +35,7 @@ class InstructorsController < ApplicationController
   private
 
   def instructor_params
-    params.require(:instructor).permit(:name, :mod, :mod_id)
+    params.require(:instructor).permit(:name)
   end
 
   def find_instructor

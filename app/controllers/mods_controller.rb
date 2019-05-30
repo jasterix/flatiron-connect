@@ -6,10 +6,11 @@ class ModsController < ApplicationController
   end
 
   def show
+
   end
 
 
   def get_mod
   @mod = Mod.find(params[:id])
-end
+  end
 end

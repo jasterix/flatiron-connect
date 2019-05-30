@@ -1,16 +1,17 @@
 <%= form_for @note do |f| %>
+
 <%= f.label "Mod:" %>
-<%= f.collection_select :mod_id, Mod.all, :id, :mod_description %>
-<%= f.label "Lecture Name:" %>
+<%= f.collection_select :mod_id, Mod.all, :id, :mod_number %><br>
+<%= f.label :lecture_name, "Lecture Title:" %>
 <%= f.text_field :lecture_name %> <br> <br>
 
-<%= f.label "Student Name" %>
-<%= f.collection_select :student_id, Student.all, :id, :name %>
+<%= f.label :name, "Student Name:" %>
+<%= f.collection_select :student_id, Student.all, :id, :name %> <br>
 
 <%= f.text_area :content, placeholder: "Paste your notes here", size: "60x12"  %> <br>
 
-<%= f.label "Highlights" %><br>
-<%= f.text_field :highlights %><br>
+<%= f.label :highlights, "Highlights for this lecture:" %> <br>
+<%= f.text_area :highlights, size:"60x2" %><br>
 <%= f.submit "save my notes"%>
 
 <% end %>
