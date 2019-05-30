@@ -11,9 +11,9 @@ class InstructorsController < ApplicationController
   end
 
   def create
-    @instructor = Instructor.new(instructor_params)
+    @instructor = Instructor.create(name: instructor_params[:name])
+     @im = InstructMod.create(instructor_id: @instructor.id, mod_id: instructor_params[:mods])
     if @instructor.valid?
-      @instructor.save
       redirect_to @instructor
     else
       flash[:error] = @instructor.error.full_messages
@@ -22,7 +22,8 @@ class InstructorsController < ApplicationController
   end
 
   def update
-    @instructor.update(instructor_params)
+    @instructor.update(name: instructor_params[:name])
+     @im = InstructMod.create(instructor_id: @instructor.id, mod_id: instructor_params[:mods])
     if @instructor.valid?
       @instructor.save
       redirect_to @instructor
@@ -35,8 +36,9 @@ class InstructorsController < ApplicationController
   private
 
   def instructor_params
-    params.require(:instructor).permit(:name, :mod, :mod_id)
+    params.require(:instructor).permit(:name, :mods)
   end
+
 
   def find_instructor
     @instructor = Instructor.find(params[:id])

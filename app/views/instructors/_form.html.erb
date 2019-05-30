@@ -1,7 +1,7 @@
 <%= form_for @instructor do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
-  <%= f.label :mod_id %>
-  <%= f.collection_select :mod_id, Mod.all, :id, :mod_number %>
+  <%= f.label :mods %>
+  <%= f.collection_select :mods, Mod.all, :id, :mod_number %>
   <%= f.submit %>
 <% end %>
