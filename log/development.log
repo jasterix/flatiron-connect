@@ -11180,3 +11180,765 @@ Completed 200 OK in 160449ms (Views: 159589.9ms | ActiveRecord: 7.1ms)
 >>>>>>> adjust-forms-to-new-tables
 
 
+Started PATCH "/instructors/3" for ::1 at 2019-05-30 13:45:46 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/johnhill/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by InstructorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xI2JrBUqN5C3hFp8W8xfhsQXLuwwCQfdnx9bK9qmiT8DEsnclEG+hkSt33K+GWaFXmnS6DewfGKCV5Q4Ds+8Ng==", "instructor"=>{"name"=>"Dan", "mods"=>"1"}, "commit"=>"Update Instructor", "id"=>"3"}
+  [1m[36mInstructor Load (0.3ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[36mMod Load (0.3ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ? AND "mods"."id" IS NULL LIMIT ?[0m  [["instructor_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:49
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:51
+  [1m[36mMod Load (0.3ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:51
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:51
+  [1m[36mInstructMod Create (1.1ms)[0m  [1m[32mINSERT INTO "instruct_mods" ("mod_id", "instructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["mod_id", 1], ["instructor_id", 3], ["created_at", "2019-05-30 17:45:46.845388"], ["updated_at", "2019-05-30 17:45:46.845388"]]
+  ↳ app/controllers/instructors_controller.rb:51
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:51
+Redirected to http://localhost:3000/instructors/3
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:29
+Redirected to 
+Completed 500 Internal Server Error in 297ms (ActiveRecord: 8.0ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/instructors_controller.rb:30:in `update'
+Started GET "/instructors/3" for ::1 at 2019-05-30 13:46:22 -0400
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mInstructor Load (0.3ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mMod Load (47.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ?[0m  [["instructor_id", 3]]
+  ↳ app/views/instructors/show.html.erb:3
+  Rendered instructors/show.html.erb within layouts/application (70.7ms)
+Completed 200 OK in 671ms (Views: 602.2ms | ActiveRecord: 50.0ms)
+
+
+Started GET "/mods/1" for ::1 at 2019-05-30 13:46:26 -0400
+Processing by ModsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMod Load (0.3ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mods_controller.rb:13
+  Rendering mods/show.html.erb within layouts/application
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."mod_id" = ? AND "notes"."mod_id" = ?[0m  [["mod_id", 1], ["mod_id", 1]]
+  ↳ app/views/mods/show.html.erb:6
+  Rendered mods/show.html.erb within layouts/application (39.4ms)
+Completed 200 OK in 100ms (Views: 73.3ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/instructors/3" for ::1 at 2019-05-30 13:46:32 -0400
+Processing by InstructorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xI2JrBUqN5C3hFp8W8xfhsQXLuwwCQfdnx9bK9qmiT8DEsnclEG+hkSt33K+GWaFXmnS6DewfGKCV5Q4Ds+8Ng==", "instructor"=>{"name"=>"Dan", "mods"=>"2"}, "commit"=>"Update Instructor", "id"=>"3"}
+  [1m[36mInstructor Load (0.4ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[36mMod Load (0.3ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ? AND "mods"."id" IS NULL LIMIT ?[0m  [["instructor_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:49
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:51
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:51
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:51
+  [1m[36mInstructMod Create (0.5ms)[0m  [1m[32mINSERT INTO "instruct_mods" ("mod_id", "instructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["mod_id", 2], ["instructor_id", 3], ["created_at", "2019-05-30 17:46:32.404982"], ["updated_at", "2019-05-30 17:46:32.404982"]]
+  ↳ app/controllers/instructors_controller.rb:51
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:29
+Redirected to http://localhost:3000/instructors/3
+Completed 302 Found in 27ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/instructors/3" for ::1 at 2019-05-30 13:46:32 -0400
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mInstructor Load (0.3ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ?[0m  [["instructor_id", 3]]
+  ↳ app/views/instructors/show.html.erb:3
+  Rendered instructors/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 60ms (Views: 56.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/instructors/3/edit" for ::1 at 2019-05-30 13:46:36 -0400
+Processing by InstructorsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mInstructor Load (0.3ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  Rendering instructors/edit.html.erb within layouts/application
+  [1m[36mMod Load (0.3ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/instructors/_form.html.erb:5
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ?[0m  [["instructor_id", 3]]
+  ↳ app/views/instructors/_form.html.erb:5
+  Rendered instructors/_form.html.erb (529.3ms)
+  Rendered instructors/edit.html.erb within layouts/application (531.2ms)
+Completed 200 OK in 563ms (Views: 559.6ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/instructors/3" for ::1 at 2019-05-30 13:46:42 -0400
+Processing by InstructorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"59T3dVsltGYnB2lycZjuFctRSjoczXz9h4+2/2Az8c0gS7cF2k49cNQu7HyUTdcWUS+2Pht0B0Kax3nstFrExA==", "instructor"=>{"name"=>"Dan", "mods"=>"2"}, "commit"=>"Update Instructor", "id"=>"3"}
+  [1m[36mInstructor Load (0.3ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[36mMod Load (0.4ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ? AND "mods"."id" IS NULL LIMIT ?[0m  [["instructor_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:49
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:51
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:51
+  [1m[36mInstructor Load (0.2ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:51
+  [1m[36mInstructMod Create (0.7ms)[0m  [1m[32mINSERT INTO "instruct_mods" ("mod_id", "instructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["mod_id", 2], ["instructor_id", 3], ["created_at", "2019-05-30 17:46:42.340663"], ["updated_at", "2019-05-30 17:46:42.340663"]]
+  ↳ app/controllers/instructors_controller.rb:51
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:29
+Redirected to http://localhost:3000/instructors/3
+Completed 302 Found in 24ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/instructors/3" for ::1 at 2019-05-30 13:46:42 -0400
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mInstructor Load (0.3ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ?[0m  [["instructor_id", 3]]
+  ↳ app/views/instructors/show.html.erb:3
+  Rendered instructors/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/instructors" for ::1 at 2019-05-30 13:49:32 -0400
+Processing by InstructorsController#index as HTML
+  Rendering instructors/index.html.erb within layouts/application
+  [1m[36mInstructor Load (0.3ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  ↳ app/views/instructors/index.html.erb:3
+  Rendered instructors/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 102ms (Views: 76.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/instructors/4" for ::1 at 2019-05-30 13:49:35 -0400
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mInstructor Load (0.3ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mMod Load (0.1ms)[0m  [1m[34mSELECT "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ?[0m  [["instructor_id", 4]]
+  ↳ app/views/instructors/show.html.erb:3
+  Rendered instructors/show.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 45ms (Views: 40.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/instructors/edit" for ::1 at 2019-05-30 13:49:42 -0400
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mInstructor Load (0.2ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Instructor with 'id'=edit):
+  
+app/controllers/instructors_controller.rb:45:in `find_instructor'
+Started GET "/instructors/4/edit" for ::1 at 2019-05-30 13:49:54 -0400
+Processing by InstructorsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mInstructor Load (0.2ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  Rendering instructors/edit.html.erb within layouts/application
+  [1m[36mMod Load (0.4ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/instructors/_form.html.erb:5
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ?[0m  [["instructor_id", 4]]
+  ↳ app/views/instructors/_form.html.erb:5
+  Rendered instructors/_form.html.erb (13.9ms)
+  Rendered instructors/edit.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 61ms (Views: 57.4ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/instructors/4" for ::1 at 2019-05-30 13:49:57 -0400
+Processing by InstructorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6SI+uPa3dYoURJ6j9bQ9WU/gZcr/X2mBnLgSqkkAL0YuvX7Id9z8nOdtG60QYQRa1Z6ZzvjmEj6B8N25nWkaTw==", "instructor"=>{"name"=>"drew", "mods"=>"2"}, "commit"=>"Update Instructor", "id"=>"4"}
+  [1m[36mInstructor Load (0.5ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[36mMod Load (0.4ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ? AND "mods"."id" IS NULL LIMIT ?[0m  [["instructor_id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:49
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:53
+  [1m[36mMod Load (0.3ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:53
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:53
+  [1m[36mInstructMod Create (0.5ms)[0m  [1m[32mINSERT INTO "instruct_mods" ("mod_id", "instructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["mod_id", 2], ["instructor_id", 4], ["created_at", "2019-05-30 17:49:57.380040"], ["updated_at", "2019-05-30 17:49:57.380040"]]
+  ↳ app/controllers/instructors_controller.rb:53
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:53
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:29
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:29
+Redirected to http://localhost:3000/instructors/4
+Completed 302 Found in 30ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/instructors/4" for ::1 at 2019-05-30 13:49:57 -0400
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mInstructor Load (0.2ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ?[0m  [["instructor_id", 4]]
+  ↳ app/views/instructors/show.html.erb:3
+  Rendered instructors/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 59ms (Views: 56.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/instructors/4/edit" for ::1 at 2019-05-30 13:50:01 -0400
+Processing by InstructorsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mInstructor Load (0.2ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  Rendering instructors/edit.html.erb within layouts/application
+  [1m[36mMod Load (0.3ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/instructors/_form.html.erb:5
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ?[0m  [["instructor_id", 4]]
+  ↳ app/views/instructors/_form.html.erb:5
+  Rendered instructors/_form.html.erb (7.3ms)
+  Rendered instructors/edit.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 50ms (Views: 47.3ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/instructors/4" for ::1 at 2019-05-30 13:50:05 -0400
+Processing by InstructorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2oor/FYjwR/cmNtQSe/p0sBsiksK8X3P38K6ScpipW8dFWuM10hICS+xXl6sOtDRWhJ2Tw1IBnDCinVaHguQZg==", "instructor"=>{"name"=>"drew", "mods"=>"2"}, "commit"=>"Update Instructor", "id"=>"4"}
+  [1m[36mInstructor Load (0.6ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ? AND "mods"."id" IS NULL LIMIT ?[0m  [["instructor_id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:49
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:53
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:53
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:53
+  [1m[36mInstructMod Create (1.1ms)[0m  [1m[32mINSERT INTO "instruct_mods" ("mod_id", "instructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["mod_id", 2], ["instructor_id", 4], ["created_at", "2019-05-30 17:50:05.135954"], ["updated_at", "2019-05-30 17:50:05.135954"]]
+  ↳ app/controllers/instructors_controller.rb:53
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:53
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:29
+Redirected to http://localhost:3000/instructors/4
+Completed 302 Found in 19ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/instructors/4" for ::1 at 2019-05-30 13:50:05 -0400
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mInstructor Load (0.2ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ?[0m  [["instructor_id", 4]]
+  ↳ app/views/instructors/show.html.erb:3
+  Rendered instructors/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 41ms (Views: 38.1ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/instructors/4" for ::1 at 2019-05-30 14:05:01 -0400
+Processing by InstructorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2oor/FYjwR/cmNtQSe/p0sBsiksK8X3P38K6ScpipW8dFWuM10hICS+xXl6sOtDRWhJ2Tw1IBnDCinVaHguQZg==", "instructor"=>{"name"=>"drew", "mods"=>"2"}, "commit"=>"Update Instructor", "id"=>"4"}
+  [1m[36mInstructor Load (0.4ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[36mMod Load (0.4ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ? AND "mods"."id" IS NULL LIMIT ?[0m  [["instructor_id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:49
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:53
+  [1m[36mMod Load (0.4ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:53
+  [1m[36mInstructor Load (0.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:53
+  [1m[36mInstructMod Create (0.5ms)[0m  [1m[32mINSERT INTO "instruct_mods" ("mod_id", "instructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["mod_id", 2], ["instructor_id", 4], ["created_at", "2019-05-30 18:05:01.732472"], ["updated_at", "2019-05-30 18:05:01.732472"]]
+  ↳ app/controllers/instructors_controller.rb:53
+  [1m[35m (33.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:53
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:29
+Redirected to http://localhost:3000/instructors/4
+Completed 302 Found in 50ms (ActiveRecord: 35.6ms)
+
+
+Started GET "/instructors/4" for ::1 at 2019-05-30 14:05:01 -0400
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mInstructor Load (0.3ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mMod Load (0.4ms)[0m  [1m[34mSELECT "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ?[0m  [["instructor_id", 4]]
+  ↳ app/views/instructors/show.html.erb:3
+  Rendered instructors/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 61ms (Views: 57.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/instructors/4/edit" for ::1 at 2019-05-30 14:05:17 -0400
+Processing by InstructorsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mInstructor Load (0.3ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  Rendering instructors/edit.html.erb within layouts/application
+  [1m[36mMod Load (0.3ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/instructors/_form.html.erb:5
+  [1m[36mMod Load (0.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ?[0m  [["instructor_id", 4]]
+  ↳ app/views/instructors/_form.html.erb:5
+  Rendered instructors/_form.html.erb (30.3ms)
+  Rendered instructors/edit.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 107ms (Views: 85.9ms | ActiveRecord: 3.3ms)
+
+
+Started PATCH "/instructors/4" for ::1 at 2019-05-30 14:05:19 -0400
+Processing by InstructorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YlnF2Ytp9dICwS/2Zu86QcdtKr1txpIr3+jGJWR/dq+lxoWpCgJ8xPHoqviDOgNCXRPWuWp/6ZTCoAk2sBZDpg==", "instructor"=>{"name"=>"drew", "mods"=>"1"}, "commit"=>"Update Instructor", "id"=>"4"}
+  [1m[36mInstructor Load (0.3ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[36mMod Load (0.3ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ? AND "mods"."id" IS NULL LIMIT ?[0m  [["instructor_id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:49
+  [1m[36mMod Load (0.9ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ? LIMIT ?[0m  [["instructor_id", 4], ["LIMIT", 11]]
+  ↳ app/controllers/instructors_controller.rb:51
+  [1m[36mMod Load (0.4ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ? AND "mods"."id" = ? LIMIT ?[0m  [["instructor_id", 4], ["id", 1], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mMod Load (0.3ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ? AND "mods"."id" = ? LIMIT ?[0m  [["instructor_id", 4], ["id", 2], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mCACHE Mod Load (0.0ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ? LIMIT ?[0m  [["instructor_id", 4], ["LIMIT", 11]]
+  ↳ app/controllers/instructors_controller.rb:51
+Completed 500 Internal Server Error in 111181ms (ActiveRecord: 2.4ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `find_or_create_mods'
+app/controllers/instructors_controller.rb:51:in `find_or_create_mods'
+app/controllers/instructors_controller.rb:26:in `update'
+Started GET "/instructors/4/edit" for ::1 at 2019-05-30 14:07:17 -0400
+Processing by InstructorsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mInstructor Load (1.7ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  Rendering instructors/edit.html.erb within layouts/application
+  [1m[36mMod Load (1.0ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/instructors/_form.html.erb:5
+  [1m[36mMod Load (1.7ms)[0m  [1m[34mSELECT "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ?[0m  [["instructor_id", 4]]
+  ↳ app/views/instructors/_form.html.erb:5
+  Rendered instructors/_form.html.erb (91.6ms)
+  Rendered instructors/edit.html.erb within layouts/application (109.7ms)
+Completed 200 OK in 970ms (Views: 930.6ms | ActiveRecord: 4.4ms)
+
+
+Started PATCH "/instructors/4" for ::1 at 2019-05-30 14:07:22 -0400
+Processing by InstructorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L/HMw2njRwSd5Qn2cl4xdeUt1VrMjhUku6g1ULO7ltvoboyz6IjOEm7MjPiXiwh2f1MpXss3bpum4PpDZ9Kj0g==", "instructor"=>{"name"=>"drew", "mods"=>"2"}, "commit"=>"Update Instructor", "id"=>"4"}
+  [1m[36mInstructor Load (0.9ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[36mMod Load (1.0ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ? AND "mods"."id" IS NULL LIMIT ?[0m  [["instructor_id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:49
+  [1m[36mMod Load (0.5ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ? LIMIT ?[0m  [["instructor_id", 4], ["LIMIT", 11]]
+  ↳ app/controllers/instructors_controller.rb:51
+  [1m[36mCACHE Mod Load (0.0ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ? AND "mods"."id" IS NULL LIMIT ?[0m  [["instructor_id", 4], ["LIMIT", 1]]
+  ↳ (byebug):1
+Completed 500 Internal Server Error in 94502ms (ActiveRecord: 3.5ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `find_or_create_mods'
+app/controllers/instructors_controller.rb:51:in `find_or_create_mods'
+app/controllers/instructors_controller.rb:26:in `update'
+Started PATCH "/instructors/4" for ::1 at 2019-05-30 14:09:02 -0400
+Processing by InstructorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L/HMw2njRwSd5Qn2cl4xdeUt1VrMjhUku6g1ULO7ltvoboyz6IjOEm7MjPiXiwh2f1MpXss3bpum4PpDZ9Kj0g==", "instructor"=>{"name"=>"drew", "mods"=>"2"}, "commit"=>"Update Instructor", "id"=>"4"}
+  [1m[36mInstructor Load (1.0ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[36mMod Load (1.0ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ? AND "mods"."id" IS NULL LIMIT ?[0m  [["instructor_id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:49
+Completed 500 Internal Server Error in 20464ms (ActiveRecord: 2.9ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `find_or_create_mods'
+app/controllers/instructors_controller.rb:51:in `find_or_create_mods'
+app/controllers/instructors_controller.rb:26:in `update'
+Started PATCH "/instructors/4" for ::1 at 2019-05-30 14:09:26 -0400
+Processing by InstructorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L/HMw2njRwSd5Qn2cl4xdeUt1VrMjhUku6g1ULO7ltvoboyz6IjOEm7MjPiXiwh2f1MpXss3bpum4PpDZ9Kj0g==", "instructor"=>{"name"=>"drew", "mods"=>"2"}, "commit"=>"Update Instructor", "id"=>"4"}
+  [1m[36mInstructor Load (1.4ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[36mMod Load (1.4ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ? AND "mods"."id" = ? LIMIT ?[0m  [["instructor_id", 4], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:49
+Completed 500 Internal Server Error in 21560ms (ActiveRecord: 32.5ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `find_or_create_mods'
+app/controllers/instructors_controller.rb:51:in `find_or_create_mods'
+app/controllers/instructors_controller.rb:26:in `update'
+Started GET "/instructors" for ::1 at 2019-05-30 14:09:56 -0400
+Processing by InstructorsController#index as HTML
+  Rendering instructors/index.html.erb within layouts/application
+  [1m[36mInstructor Load (1.7ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  ↳ app/views/instructors/index.html.erb:3
+  Rendered instructors/index.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 964ms (Views: 947.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/instructors/9" for ::1 at 2019-05-30 14:09:59 -0400
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mInstructor Load (1.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mMod Load (2.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ?[0m  [["instructor_id", 9]]
+  ↳ app/views/instructors/show.html.erb:3
+  Rendered instructors/show.html.erb within layouts/application (67.8ms)
+Completed 200 OK in 922ms (Views: 901.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/instructors/9/edit" for ::1 at 2019-05-30 14:10:05 -0400
+Processing by InstructorsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mInstructor Load (1.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  Rendering instructors/edit.html.erb within layouts/application
+  [1m[36mMod Load (1.5ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/instructors/_form.html.erb:5
+  [1m[36mMod Load (1.1ms)[0m  [1m[34mSELECT "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ?[0m  [["instructor_id", 9]]
+  ↳ app/views/instructors/_form.html.erb:5
+  Rendered instructors/_form.html.erb (112.3ms)
+  Rendered instructors/edit.html.erb within layouts/application (120.1ms)
+Completed 200 OK in 1023ms (Views: 998.7ms | ActiveRecord: 3.7ms)
+
+
+Started PATCH "/instructors/9" for ::1 at 2019-05-30 14:10:09 -0400
+Processing by InstructorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gmwp2ncDRQxqZiytE1/soNdFpyVdoY9Et5bcUTNXxjVF82mq9mjMGplPqaP2itWjTTtbIVoY9Puq3hNC5z7zPA==", "instructor"=>{"name"=>"drew", "mods"=>"5"}, "commit"=>"Update Instructor", "id"=>"9"}
+  [1m[36mInstructor Load (1.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  [1m[35m (1.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[36mMod Load (1.8ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ? AND "mods"."id" = ? LIMIT ?[0m  [["instructor_id", 9], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:49
+Completed 500 Internal Server Error in 9872ms (ActiveRecord: 4.6ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `find_or_create_mods'
+app/controllers/instructors_controller.rb:51:in `find_or_create_mods'
+app/controllers/instructors_controller.rb:26:in `update'
+Started PATCH "/instructors/9" for ::1 at 2019-05-30 14:10:23 -0400
+Processing by InstructorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gmwp2ncDRQxqZiytE1/soNdFpyVdoY9Et5bcUTNXxjVF82mq9mjMGplPqaP2itWjTTtbIVoY9Puq3hNC5z7zPA==", "instructor"=>{"name"=>"drew", "mods"=>"5"}, "commit"=>"Update Instructor", "id"=>"9"}
+  [1m[36mInstructor Load (1.5ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[36mMod Load (2.1ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ? AND "mods"."id" = ? LIMIT ?[0m  [["instructor_id", 9], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:49
+Redirected to http://localhost:3000/instructors/9
+  [1m[35m (1.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:29
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:29
+Redirected to 
+Completed 500 Internal Server Error in 570ms (ActiveRecord: 44.0ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/instructors_controller.rb:30:in `update'
+Started PATCH "/instructors/9" for ::1 at 2019-05-30 14:10:58 -0400
+Processing by InstructorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gmwp2ncDRQxqZiytE1/soNdFpyVdoY9Et5bcUTNXxjVF82mq9mjMGplPqaP2itWjTTtbIVoY9Puq3hNC5z7zPA==", "instructor"=>{"name"=>"drew", "mods"=>"5"}, "commit"=>"Update Instructor", "id"=>"9"}
+  [1m[36mInstructor Load (1.7ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[36mMod Load (1.4ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ? AND "mods"."id" = ? LIMIT ?[0m  [["instructor_id", 9], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:49
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:29
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:29
+Redirected to http://localhost:3000/instructors/9
+Completed 302 Found in 587ms (ActiveRecord: 33.6ms)
+
+
+Started GET "/instructors/9" for ::1 at 2019-05-30 14:11:01 -0400
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mInstructor Load (1.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mMod Load (1.7ms)[0m  [1m[34mSELECT "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ?[0m  [["instructor_id", 9]]
+  ↳ app/views/instructors/show.html.erb:3
+  Rendered instructors/show.html.erb within layouts/application (62.5ms)
+Completed 200 OK in 939ms (Views: 905.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/instructors" for ::1 at 2019-05-30 14:11:06 -0400
+Processing by InstructorsController#index as HTML
+  Rendering instructors/index.html.erb within layouts/application
+  [1m[36mInstructor Load (2.1ms)[0m  [1m[34mSELECT "instructors".* FROM "instructors"[0m
+  ↳ app/views/instructors/index.html.erb:3
+  Rendered instructors/index.html.erb within layouts/application (57.9ms)
+Completed 200 OK in 946ms (Views: 931.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/instructors/6" for ::1 at 2019-05-30 14:11:10 -0400
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mInstructor Load (1.5ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mMod Load (1.3ms)[0m  [1m[34mSELECT "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ?[0m  [["instructor_id", 6]]
+  ↳ app/views/instructors/show.html.erb:3
+  Rendered instructors/show.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 898ms (Views: 867.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/instructors/6/edit" for ::1 at 2019-05-30 14:11:18 -0400
+Processing by InstructorsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mInstructor Load (1.3ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  Rendering instructors/edit.html.erb within layouts/application
+  [1m[36mMod Load (1.6ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/instructors/_form.html.erb:5
+  [1m[36mMod Load (1.5ms)[0m  [1m[34mSELECT "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ?[0m  [["instructor_id", 6]]
+  ↳ app/views/instructors/_form.html.erb:5
+  Rendered instructors/_form.html.erb (108.1ms)
+  Rendered instructors/edit.html.erb within layouts/application (120.6ms)
+Completed 200 OK in 1286ms (Views: 1128.4ms | ActiveRecord: 4.4ms)
+
+
+Started PATCH "/instructors/6" for ::1 at 2019-05-30 14:11:28 -0400
+Processing by InstructorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y/biLwPAQZdYvqJh2suvU2Rfg1ajnZUTcsTboV3D7WAMaaJfgqvIgauXJ28/HpZQ/iF/UqQk7qxvjBSyiarYaQ==", "instructor"=>{"name"=>"Helen", "mods"=>"1"}, "commit"=>"Update Instructor", "id"=>"6"}
+  [1m[36mInstructor Load (1.2ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[36mInstructor Update (1.7ms)[0m  [1m[33mUPDATE "instructors" SET "name" = ?, "updated_at" = ? WHERE "instructors"."id" = ?[0m  [["name", "Helen"], ["updated_at", "2019-05-30 18:11:28.562206"], ["id", 6]]
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[36mMod Load (4.9ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ? AND "mods"."id" = ? LIMIT ?[0m  [["instructor_id", 6], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:49
+  [1m[35m (2.8ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:51
+  [1m[36mMod Load (2.3ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:51
+  [1m[36mInstructor Load (2.5ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:51
+  [1m[36mInstructMod Create (1.5ms)[0m  [1m[32mINSERT INTO "instruct_mods" ("mod_id", "instructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["mod_id", 1], ["instructor_id", 6], ["created_at", "2019-05-30 18:11:28.933250"], ["updated_at", "2019-05-30 18:11:28.933250"]]
+  ↳ app/controllers/instructors_controller.rb:51
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:51
+  [1m[35m (1.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:29
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:29
+Redirected to http://localhost:3000/instructors/6
+Completed 302 Found in 647ms (ActiveRecord: 30.6ms)
+
+
+Started GET "/instructors/6" for ::1 at 2019-05-30 14:11:29 -0400
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mInstructor Load (1.2ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mMod Load (1.8ms)[0m  [1m[34mSELECT "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ?[0m  [["instructor_id", 6]]
+  ↳ app/views/instructors/show.html.erb:3
+  Rendered instructors/show.html.erb within layouts/application (43.4ms)
+Completed 200 OK in 932ms (Views: 865.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/instructors/6/edit" for ::1 at 2019-05-30 14:11:35 -0400
+Processing by InstructorsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mInstructor Load (2.6ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  Rendering instructors/edit.html.erb within layouts/application
+  [1m[36mMod Load (1.4ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/instructors/_form.html.erb:5
+  [1m[36mMod Load (1.3ms)[0m  [1m[34mSELECT "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ?[0m  [["instructor_id", 6]]
+  ↳ app/views/instructors/_form.html.erb:5
+  Rendered instructors/_form.html.erb (223.1ms)
+  Rendered instructors/edit.html.erb within layouts/application (231.2ms)
+Completed 200 OK in 1129ms (Views: 1093.3ms | ActiveRecord: 5.4ms)
+
+
+Started PATCH "/instructors/6" for ::1 at 2019-05-30 14:11:39 -0400
+Processing by InstructorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PC2mJEVM3CuhkiHofIVHQ1P3EC4o3y9h9vKs0Oflrhn7suZUxCdVPVK7pOaZUH5AyYnsKi9mVN7rumPDM4ybEA==", "instructor"=>{"name"=>"Helen", "mods"=>"2"}, "commit"=>"Update Instructor", "id"=>"6"}
+  [1m[36mInstructor Load (1.4ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[36mMod Load (1.3ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ? AND "mods"."id" = ? LIMIT ?[0m  [["instructor_id", 6], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:49
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:51
+  [1m[36mMod Load (1.5ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" WHERE "mods"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:51
+  [1m[36mInstructor Load (2.5ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:51
+  [1m[36mInstructMod Create (1.9ms)[0m  [1m[32mINSERT INTO "instruct_mods" ("mod_id", "instructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["mod_id", 2], ["instructor_id", 6], ["created_at", "2019-05-30 18:11:39.498145"], ["updated_at", "2019-05-30 18:11:39.498145"]]
+  ↳ app/controllers/instructors_controller.rb:51
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:51
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:29
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:29
+Redirected to http://localhost:3000/instructors/6
+Completed 302 Found in 305ms (ActiveRecord: 19.7ms)
+
+
+Started GET "/instructors/6" for ::1 at 2019-05-30 14:11:39 -0400
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mInstructor Load (1.8ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mMod Load (1.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ?[0m  [["instructor_id", 6]]
+  ↳ app/views/instructors/show.html.erb:3
+  Rendered instructors/show.html.erb within layouts/application (49.1ms)
+Completed 200 OK in 971ms (Views: 915.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/instructors/6/edit" for ::1 at 2019-05-30 14:11:44 -0400
+Processing by InstructorsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mInstructor Load (1.6ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  Rendering instructors/edit.html.erb within layouts/application
+  [1m[36mMod Load (1.2ms)[0m  [1m[34mSELECT "mods".* FROM "mods"[0m
+  ↳ app/views/instructors/_form.html.erb:5
+  [1m[36mMod Load (1.4ms)[0m  [1m[34mSELECT "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ?[0m  [["instructor_id", 6]]
+  ↳ app/views/instructors/_form.html.erb:5
+  Rendered instructors/_form.html.erb (111.4ms)
+  Rendered instructors/edit.html.erb within layouts/application (120.3ms)
+Completed 200 OK in 1093ms (Views: 1053.0ms | ActiveRecord: 4.2ms)
+
+
+Started PATCH "/instructors/6" for ::1 at 2019-05-30 14:11:48 -0400
+Processing by InstructorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jyemhlbxFlXaOek6b+Ibm75Y/+eZoKwlXxStLeGtFb1IuOb215qfQykQbDSKNyKYJCYD454Z15pCXGI+NcQgtA==", "instructor"=>{"name"=>"Helen", "mods"=>"2"}, "commit"=>"Update Instructor", "id"=>"6"}
+  [1m[36mInstructor Load (1.1ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:25
+  [1m[36mMod Load (1.2ms)[0m  [1m[34mSELECT  "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ? AND "mods"."id" = ? LIMIT ?[0m  [["instructor_id", 6], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:49
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/instructors_controller.rb:29
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/instructors_controller.rb:29
+Redirected to http://localhost:3000/instructors/6
+Completed 302 Found in 139ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/instructors/6" for ::1 at 2019-05-30 14:11:48 -0400
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mInstructor Load (1.2ms)[0m  [1m[34mSELECT  "instructors".* FROM "instructors" WHERE "instructors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:45
+  Rendering instructors/show.html.erb within layouts/application
+  [1m[36mMod Load (1.7ms)[0m  [1m[34mSELECT "mods".* FROM "mods" INNER JOIN "instruct_mods" ON "mods"."id" = "instruct_mods"."mod_id" WHERE "instruct_mods"."instructor_id" = ?[0m  [["instructor_id", 6]]
+  ↳ app/views/instructors/show.html.erb:3
+  Rendered instructors/show.html.erb within layouts/application (47.4ms)
+Completed 200 OK in 887ms (Views: 847.5ms | ActiveRecord: 2.8ms)
+
+
