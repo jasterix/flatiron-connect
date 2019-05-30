@@ -1,14 +1,19 @@
 <h1><%= @student.name %></h1>
 <p>Mod Name: <%= @student.mod_name %><br>
-  Mod Start Date: <%= @student.mod_start_date.strftime("%B %d, %Y") %><br>
+  Mod Start Date:
+   <% if @student.mod_start_date != nil %>
+   <%= @student.mod_start_date.strftime("%B %d, %Y") %>
+   <% end %><br>
   GitHub: <%= @student.github_link %><br>
   Linked In: <%= @student.linkedin_link %>
   <h2>Notes:</h2>
+  <%= button_to "Add Note", new_note_path, method: :get %>
   <ul>
-    
+
     <% @student.notes.where.not(content:nil).each do |note|  %>
     <li><%= link_to note.lecture_name, note_path(note) %></li>
     <% end %>
 
   </ul>
+  <%= button_to "Edit Student", edit_student_path, method: :get %>
 </p>

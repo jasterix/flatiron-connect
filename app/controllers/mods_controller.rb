@@ -9,8 +9,9 @@ class ModsController < ApplicationController
 
   end
 
+  private
 
   def get_mod
-  @mod = Mod.find(params[:id])
+    @mod = Mod.find(params[:id])
   end
 end
