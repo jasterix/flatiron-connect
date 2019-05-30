@@ -36,7 +36,11 @@ class InstructorsController < ApplicationController
   private
 
   def instructor_params
+<<<<<<< HEAD
     params.require(:instructor).permit(:name, :mods)
+=======
+    params.require(:instructor).permit(:name)
+>>>>>>> adjust-forms-to-new-tables
   end
 
 

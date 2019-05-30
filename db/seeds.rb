@@ -15,7 +15,7 @@ Follow.destroy_all
 require 'faker'
 
 #MODS-------------------------------------------------------------------
-mods = [Mod 1, Mod 2, Mod 3, Mod 4, Mod 5]
+mods = ["Mod 1", "Mod 2", "Mod 3", "Mod 4", "Mod 5"]
 mods.map do |x|
   Mod.create(mod_number:x)
 end
@@ -43,11 +43,11 @@ instructors = ["Kevin", "Graham"]
 tcfs = ["Helen", "Dan"]
 
 instructors.map do |instructor|
-  Instructor.create(name:instructor, mod_id: 1)
+  Instructor.create(name:instructor)
 end
 
 tcfs.map do |tcf|
-  Instructor.create(name:tcf, mod_id: 2)
+  Instructor.create(name:tcf)
 end
 
 
