@@ -2,30 +2,9 @@
 
 <%= link_to 'Add a new note', new_note_path %><hr>
 
-<% lecture_groups = Note.all.group(:lecture_name).uniq%>
-<% lecture_groups.uniq %>
-<% lecture_names = lecture_groups.map{|x| x.lecture_name}%>
-
-<% not_empty_lectures = [] %>
-<% notes_for_select_lecture = not_empty_lectures.select {|x| x.lecture_name== name}%>
-<%lecture_names.each do |name| %>
-
-  <ul>
-    <% lecture_groups.each do |note_object|%>
-      <% if note_object.content != nil %>
-      <div>
-        <% not_empty_lectures << note_object %>
-        </div>
-        <% end %>
-
-        <%= not_empty_lectures.each do |x| %>
-
-        <li><%=x.lecture_name%></li>
-        <% end %>
+<ul>
+<li><%= @not_empty_lectures.uniq.map(&:lecture_name).join("/n") %></li>
+<li><%= @not_empty_lectures.uniq.map(&:content).join("/n") %></li>
 
 
-
-
-      <% end %>
-    <% end %>
-  </ul>
+</ul>

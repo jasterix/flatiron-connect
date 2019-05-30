@@ -1,5 +1,7 @@
 <h1>All Notes</h1>
 
 <% Note.all.each do |note| %>
-<%= link_to note.lecture_name, note_path(note) %> <br
+  <% if !note.content.nil? %>
+  <%= link_to note.lecture_name, note_path(note) %> <br>
+  <% end %>
 <% end %>
