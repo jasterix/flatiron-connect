@@ -4,8 +4,8 @@
    <% if @student.mod_start_date != nil %>
    <%= @student.mod_start_date.strftime("%B %d, %Y") %>
    <% end %><br>
-  GitHub: <%= @student.github_link %><br>
-  Linked In: <%= @student.linkedin_link %>
+   <%=link_to "GitHub", @student.github_link %><br>
+   <%=  link_to "LinkedIn", @student.linkedin_link %>
   <h2>Notes:</h2>
   <%= button_to "Add Note", new_note_path, method: :get %>
   <ul>
@@ -13,10 +13,20 @@
     <% @student.notes.where.not(content:nil).each do |note|  %>
     <li><%= link_to note.lecture_name, note_path(note) %></li>
     <% end %>
-
   </ul>
 
-  <div>
-  <%= button_to "Edit Student", edit_student_path, method: :get %>
-  </div>
+    <h2>Resources</h2>
+    <%= button_to "Add Resource", new_resource_path, method: :get %>
+    <ul>
+      <% @student.resources.each do |resourse| %>
+      <li><%= link_to resource.links, resource_path(resource) %></li>
+      <% end %>
+    </ul>
+    <%= button_to "Edit Student", edit_student_path, method: :get %><br>
+    <br>
+    <%= link_to "Go to Mods", mods_path %>
+    <%= link_to "Go to Instructors", instructors_path %>
+    <%= link_to "Go to All Resources", resources_path %>
+    <%= link_to "Go to All Notes", notes_path %>
+
 </p>

@@ -1,0 +1,8 @@
+<h1>New Follows</h1>
+<%= form_for @follow do |f| %>
+<%= f.label :resourse %>
+<%= f.text_field :resourse_id %>
+<%= f.label :student_id %>
+<%= f.collection_select :student_id, Student.all, :id, :name %>
+<%= f.submit %>
+<% end %>

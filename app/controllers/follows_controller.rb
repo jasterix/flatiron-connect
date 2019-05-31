@@ -1,6 +1,10 @@
 class FollowsController < ApplicationController
 
-  before_action :find_follow, only: [:edit, :update, :delete]
+  before_action :find_follow, only: [:show, :edit, :update, :delete]
+
+  def new
+    @follow = Follow.new
+  end
 
   def update
     @follow.update(follow_params)

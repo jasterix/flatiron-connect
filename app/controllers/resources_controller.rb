@@ -11,7 +11,8 @@ class ResourcesController < ApplicationController
   end
 
   def create
-    @resource = Resource.create(resource_params)
+    @resource = Resource.create(resource_params[:links])
+    @follow = Follow.create(resourse_id: self.id, student_id: resource_params[:students])
     if @resource.valid?
       redirect_to @resource
     else
@@ -25,7 +26,7 @@ class ResourcesController < ApplicationController
 
 
   def edit
-
+    @resource = Resource.find(params[:id])
   end
 
   def update
@@ -39,7 +40,7 @@ class ResourcesController < ApplicationController
   private
 
   def resource_params
-    params.require(:resource).permit(:links)
+    params.require(:resource).permit(:links, :students)
   end
 
   def find_resource

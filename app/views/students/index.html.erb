@@ -4,4 +4,10 @@
   <li><%= link_to student.name, student %></li>
   <% end %>
 </ul>
-<%= button_to "Create New Student", new_student_path, method: :get %>
+<%= button_to "Create New Student", new_student_path, method: :get %><br>
+<br>
+
+<%= link_to "Go to Mods", mods_path %>
+<%= link_to "Go to Instructors", instructors_path %>
+<%= link_to "Go to Resources", resources_path %>
+<%= link_to "Go to Notes", notes_path %>

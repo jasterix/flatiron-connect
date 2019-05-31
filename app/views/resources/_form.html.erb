@@ -1,6 +1,7 @@
 <%= form_for @resource do |f| %>
 <div>
-
+  <%= f.label :students %>
+  <%= f.collection_select :students, Student.all, :id, :name %>
   <%= f.label "Add your favorite links:"%><br><br>
   &nbsp;&nbsp;<%= f.text_field :links, placeholder: "Paste link here"%>
   </div>
