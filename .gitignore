@@ -22,4 +22,4 @@
 
 #ignore master key
 /config/master.key
-
+*.log
