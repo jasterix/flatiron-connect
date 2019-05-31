@@ -1,7 +1,26 @@
 <h1>All Notes</h1>
+<div class="navigation-links">
 
+<%= link_to "Create a new note", new_note_path %>
+</div>
+
+<br>
+
+<ul>
 <% Note.all.each do |note| %>
   <% if !note.content.nil? %>
-  <%= link_to note.lecture_name, note_path(note) %> <br>
+  <li><%= link_to note.lecture_name, note_path(note) %></li>
   <% end %>
 <% end %>
+
+</ul>
+
+<br>
+
+<br>
+<div class="page-links">
+  <%= link_to "View All Mods", mods_path %>
+  <%= link_to "View All Instructors", instructors_path %>
+  <%= link_to "View All Students", students_path %>
+  <%= link_to "View All Resources", resources_path %>
+</div>

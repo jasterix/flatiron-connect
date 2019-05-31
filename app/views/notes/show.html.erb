@@ -1,6 +1,19 @@
 <h1> <%= @note.lecture_name %> Notes</h1>
 
+<%= @note.student.name %>'s Notes for <u><%=@note.lecture_name%></u> <br><br>
+<b>Things to keep in mind: </b><%= @note.highlights %>
+<hr>
+Notes:<br>
+  <%= @note.content %><br><br><br>
 
+  <div class="page-links">
+  <%= link_to "Go to Mods", mods_path %>
+  <%= link_to "Go to Instructors", instructors_path %>
+  <%= link_to "Go to Students", students_path %>
+  <%= link_to "Go to Resource", resources_path %>
+</div>
 
-
-  <%= @note.content %><br>
+<br>
+<div class="navigation-links">
+<%= link_to "Back to Notes", notes_path %>
+</div>
