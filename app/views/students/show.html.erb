@@ -1,4 +1,9 @@
 <h1><%= @student.name %></h1>
+
+<div class="navigation-links">
+<%= link_to "Back to students", students_path %> <hr>
+</div>
+
 <p>Mod Name: <%= @student.mod_name %><br>
   Mod Start Date:
    <% if @student.mod_start_date != nil %>
@@ -18,15 +23,17 @@
     <h2>Resources</h2>
     <%= button_to "Add Resource", new_resource_path, method: :get %>
     <ul>
-      <% @student.resources.each do |resourse| %>
+      <% @student.resources.each do |resource| %>
       <li><%= link_to resource.links, resource_path(resource) %></li>
       <% end %>
     </ul>
     <%= button_to "Edit Student", edit_student_path, method: :get %><br>
     <br>
+
+  <div class="page-links">
     <%= link_to "Go to Mods", mods_path %>
     <%= link_to "Go to Instructors", instructors_path %>
     <%= link_to "Go to All Resources", resources_path %>
     <%= link_to "Go to All Notes", notes_path %>
-
+  </div>
 </p>

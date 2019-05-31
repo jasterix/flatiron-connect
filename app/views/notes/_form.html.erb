@@ -3,7 +3,7 @@
 <%= f.label "Mod:" %>
 <%= f.collection_select :mod_id, Mod.all, :id, :mod_number %><br>
 <%= f.label :lecture_name, "Lecture Title:" %>
-<%= f.text_field :lecture_name %> <br> <br>
+<%= f.text_field :lecture_name %> <br>
 
 <%= f.label :name, "Student Name:" %>
 <%= f.collection_select :student_id, Student.all, :id, :name %> <br>

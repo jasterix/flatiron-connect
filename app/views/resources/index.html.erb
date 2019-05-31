@@ -1,8 +1,7 @@
 <h1>Resources</h1>
 <ul>
 <% @resources.each do |resource| %>
-<li><%= link_to "Link", resource.links %></li>
-<li> <%= link_to "⭐️", edit_resource_url(resource) %> </li>
+<li><%= link_to "Link", resource.links %> <%= link_to "⭐️", edit_resource_url(resource) %></li>
 
 
 <% end %>

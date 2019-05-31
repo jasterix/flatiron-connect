@@ -11,8 +11,8 @@ class ResourcesController < ApplicationController
   end
 
   def create
-    @resource = Resource.create(resource_params[:links])
-    @follow = Follow.create(resourse_id: self.id, student_id: resource_params[:students])
+    @resource = Resource.create(links: resource_params[:links])
+    @follow = Follow.create(resource_id: @resource.id, student_id: resource_params[:students])
     if @resource.valid?
       redirect_to @resource
     else
@@ -30,6 +30,14 @@ class ResourcesController < ApplicationController
   end
 
   def update
+    @resource.update(links: resource_params[:links])
+    find_or_create_follow
+    if @resource.valid?
+      redirect_to @resource
+    else
+      flash[:error] = @resource.errors.full_messages
+      render 'new'
+    end
 
   end
 
@@ -45,5 +53,12 @@ class ResourcesController < ApplicationController
 
   def find_resource
     @resource = Resource.find(params[:id])
+  end
+
+  def find_or_create_follow
+    @found = @resource.students.find_by(id: resource_params[:students])
+    if @found == nil
+      Follow.create(resource_id: @resource.id, student_id: resource_params[:students])
+    end
   end
 end

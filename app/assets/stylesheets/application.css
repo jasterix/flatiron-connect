@@ -36,3 +36,8 @@ body .navigation-links a {
   border-width: 2px;
   border-radius: 3px;
 }
+
+div .page-links .navigation-links {
+  display: flex;
+  justify-content: space-between;
+}
