@@ -1,5 +1,7 @@
+<h1> <%= @mod.mod_description %>'s Lectures </h1>
 <h1> <%= @mod.mod_number %>'s Notes </h1>
 
+<<<<<<< HEAD
 <%= link_to 'Add a new note', new_note_path %><hr>
 
 <<<<<<< HEAD
@@ -39,3 +41,12 @@
 
 </ul>
 >>>>>>> resources
+=======
+<ul>
+<h3><%= link_to 'Add a new note', new_note_path %><hr></h3>
+<p>
+<% @mod.notes.where(mod_id:1).map do |note|%>
+  <%= link_to note.lecture_name, note_path(note) %><br>
+<% end %>
+<%= link_to 'Add a new note', new_note_path %><hr>
+>>>>>>> 3653693c222dff8dd8259d3c903545bca7bb8b45
