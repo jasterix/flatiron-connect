@@ -2,6 +2,7 @@
 
 <%= link_to 'Add a new note', new_note_path %><hr>
 
+<<<<<<< HEAD
 <% notes_grouped_by_lecture = Note.all.group(:lecture_name).uniq%>
 
 <% lecture_names = notes_grouped_by_lecture.map do |note|%>
@@ -30,3 +31,11 @@
       <% end %>
     <% end %>
   </ul>
+=======
+<ul>
+<li><%= @not_empty_lectures.uniq.map(&:lecture_name).join("/n") %></li>
+<li><%= @not_empty_lectures.uniq.map(&:content).join("/n") %></li>
+
+
+</ul>
+>>>>>>> resources

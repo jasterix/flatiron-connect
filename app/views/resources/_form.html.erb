@@ -1,0 +1,11 @@
+<%= form_for @resource do |f| %>
+<div>
+
+  <%= f.label "Add your favorite links:"%><br><br>
+  &nbsp;&nbsp;<%= f.text_field :links, placeholder: "Paste link here"%>
+  </div>
+  <br>
+    <div>
+    <%= f.submit "Add resources" %>
+  </div>
+<% end %>
