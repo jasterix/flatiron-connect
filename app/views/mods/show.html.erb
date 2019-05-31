@@ -1,52 +1,8 @@
-<h1> <%= @mod.mod_description %>'s Lectures </h1>
-<h1> <%= @mod.mod_number %>'s Notes </h1>
 
-<<<<<<< HEAD
-<%= link_to 'Add a new note', new_note_path %><hr>
+<h1> Mod <%= @mod.mod_number %>'s Notes </h1>
 
-<<<<<<< HEAD
-<% notes_grouped_by_lecture = Note.all.group(:lecture_name).uniq%>
-
-<% lecture_names = notes_grouped_by_lecture.map do |note|%>
-    <% note.lecture_name %>
-  <% end %>
-
-<ul>
-  <%lecture_names.each do |name| %>
-  <% not_empty_lectures = [] %>
-    <% lectures_note = not_empty_lectures.select {|x| x.lecture_name == name}
-      <% notes_grouped_by_lecture.each do |note_object|%>
-        <% if note_object.content != nil %>
-        <div>
-          <% not_empty_lectures << note_object %>
-          </div>
-          <% end %>
-
-          <% not_empty_lectures.each do |x| %>
-          <% byebug %>
-          <li><%=x.lecture_name%></li>
-          <% end %>
-
-
-
-
-      <% end %>
+  <% @mod.notes.each do |note|%>
+    <% if note.content %>
+      <%= link_to note.lecture_name, note_path(note) %><br>
     <% end %>
-  </ul>
-=======
-<ul>
-<li><%= @not_empty_lectures.uniq.map(&:lecture_name).join("/n") %></li>
-<li><%= @not_empty_lectures.uniq.map(&:content).join("/n") %></li>
-
-
-</ul>
->>>>>>> resources
-=======
-<ul>
-<h3><%= link_to 'Add a new note', new_note_path %><hr></h3>
-<p>
-<% @mod.notes.where(mod_id:1).map do |note|%>
-  <%= link_to note.lecture_name, note_path(note) %><br>
-<% end %>
-<%= link_to 'Add a new note', new_note_path %><hr>
->>>>>>> 3653693c222dff8dd8259d3c903545bca7bb8b45
+  <% end %>

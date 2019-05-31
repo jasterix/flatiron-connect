@@ -22,6 +22,8 @@ class ResourcesController < ApplicationController
 
   def show
   end
+
+
   def edit
 
   end
