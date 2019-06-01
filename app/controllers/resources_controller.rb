@@ -42,7 +42,6 @@ class ResourcesController < ApplicationController
   end
 
   def delete
-
   end
 
   private
